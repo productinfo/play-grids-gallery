@@ -1,6 +1,6 @@
 //
-//  MyPlayProjectViewController.m
-//  MyPlayProject
+//  GridsGalleryViewController.h
+//  GridsGallery
 //
 //  Created by Alison Clarke on 27/08/2014.
 //
@@ -19,24 +19,9 @@
 //  limitations under the License.
 //
 
-#import "MyPlayProjectViewController.h"
+@import UIKit;
+#import "ShinobiPlayUtils/SPUGalleryManagedViewController.h"
 
-@interface MyPlayProjectViewController ()
-
-@end
-
-@implementation MyPlayProjectViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+@interface GridsGalleryViewController : SPUGalleryManagedViewController
 
 @end

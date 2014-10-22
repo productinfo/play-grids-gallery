@@ -1,6 +1,6 @@
 //
-//  MyPlayProjectAppDelegate.m
-//  MyPlayProject
+//  GridsGalleryAppDelegate.m
+//  GridsGallery
 //
 //  Created by Alison Clarke on 27/08/2014.
 //
@@ -19,9 +19,9 @@
 //  limitations under the License.
 //
 
-#import "MyPlayProjectAppDelegate.h"
+#import "GridsGalleryAppDelegate.h"
 
-@implementation MyPlayProjectAppDelegate
+@implementation GridsGalleryAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

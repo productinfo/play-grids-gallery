@@ -1,6 +1,6 @@
 //
-//  MyPlayProjectAppDelegate.h
-//  MyPlayProject
+//  GridsGalleryViewController.m
+//  GridsGallery
 //
 //  Created by Alison Clarke on 27/08/2014.
 //
@@ -19,10 +19,24 @@
 //  limitations under the License.
 //
 
-@import UIKit;
+#import "GridsGalleryViewController.h"
 
-@interface MyPlayProjectAppDelegate : UIResponder <UIApplicationDelegate>
+@interface GridsGalleryViewController ()
 
-@property (strong, nonatomic) UIWindow *window;
+@end
+
+@implementation GridsGalleryViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

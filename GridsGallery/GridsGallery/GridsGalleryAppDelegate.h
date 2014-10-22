@@ -1,6 +1,6 @@
 //
-//  MyPlayProjectViewController.h
-//  MyPlayProject
+//  GridsGalleryAppDelegate.h
+//  GridsGallery
 //
 //  Created by Alison Clarke on 27/08/2014.
 //
@@ -20,8 +20,9 @@
 //
 
 @import UIKit;
-#import "ShinobiPlayUtils/SPUGalleryManagedViewController.h"
 
-@interface MyPlayProjectViewController : SPUGalleryManagedViewController
+@interface GridsGalleryAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end
