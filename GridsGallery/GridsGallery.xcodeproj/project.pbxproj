@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54E3A3AD19F7FA13001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */; };
+		54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */; };
 		68171BE119ADDBC5000AFEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE019ADDBC5000AFEEB /* Foundation.framework */; };
 		68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */; };
 		68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE419ADDBC5000AFEEB /* UIKit.framework */; };
@@ -21,16 +21,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		54E3A3A919F7F854001AD37B /* PBXContainerItemProxy */ = {
+		54E3A3B819F817E9001AD37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+			containerPortal = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68793C011959855D009C17BD;
 			remoteInfo = ShinobiPlayUtils;
 		};
-		54E3A3AB19F7F854001AD37B /* PBXContainerItemProxy */ = {
+		54E3A3BA19F817E9001AD37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+			containerPortal = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68793C111959855E009C17BD;
 			remoteInfo = ShinobiPlayUtilsTests;
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
+		54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
 		68171BDD19ADDBC5000AFEEB /* GridsGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridsGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68171BE019ADDBC5000AFEEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E3A3AD19F7FA13001AD37B /* libShinobiPlayUtils.a in Frameworks */,
+				54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */,
 				68171C1619ADDC04000AFEEB /* QuartzCore.framework in Frameworks */,
 				68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */,
 				68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */,
@@ -73,11 +73,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		54E3A3A519F7F854001AD37B /* Products */ = {
+		54E3A3B419F817E9001AD37B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */,
-				54E3A3AC19F7F854001AD37B /* ShinobiPlayUtilsTests.xctest */,
+				54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */,
+				54E3A3BB19F817E9001AD37B /* ShinobiPlayUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,7 +85,7 @@
 		68171BD419ADDBC5000AFEEB = {
 			isa = PBXGroup;
 			children = (
-				54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */,
+				54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */,
 				68171BE619ADDBC5000AFEEB /* GridsGallery */,
 				68171BDF19ADDBC5000AFEEB /* Frameworks */,
 				68171BDE19ADDBC5000AFEEB /* Products */,
@@ -180,8 +180,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 54E3A3A519F7F854001AD37B /* Products */;
-					ProjectRef = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+					ProductGroup = 54E3A3B419F817E9001AD37B /* Products */;
+					ProjectRef = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -192,18 +192,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */ = {
+		54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libShinobiPlayUtils.a;
-			remoteRef = 54E3A3A919F7F854001AD37B /* PBXContainerItemProxy */;
+			remoteRef = 54E3A3B819F817E9001AD37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		54E3A3AC19F7F854001AD37B /* ShinobiPlayUtilsTests.xctest */ = {
+		54E3A3BB19F817E9001AD37B /* ShinobiPlayUtilsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ShinobiPlayUtilsTests.xctest;
-			remoteRef = 54E3A3AB19F7F854001AD37B /* PBXContainerItemProxy */;
+			remoteRef = 54E3A3BA19F817E9001AD37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -371,6 +371,7 @@
 				68171C1119ADDBC5000AFEEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
