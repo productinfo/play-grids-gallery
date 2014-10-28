@@ -8,9 +8,6 @@
 
 #import "GridsGalleryCommonViewController.h"
 
-static CGFloat const filmTitleColumnWidth = 350.0f;
-static CGFloat const certificationColumnWidth =  170.0f;
-
 @implementation GridsGalleryCommonViewController
 
 - (void)viewDidLoad {
@@ -37,6 +34,8 @@ static CGFloat const certificationColumnWidth =  170.0f;
 }
 
 - (void)addColumns {
+  static CGFloat const filmTitleColumnWidth = 350.0f;
+  static CGFloat const certificationColumnWidth =  170.0f;
   
   float columnWidth = ((CGRectGetWidth(self.grid.frame) - (filmTitleColumnWidth + certificationColumnWidth)) / 3);
   
@@ -80,6 +79,7 @@ static CGFloat const certificationColumnWidth =  170.0f;
   column.propertyKey = propertyKey;
   column.width = @(width);
   column.cellStyle.textAlignment = textAlignment;
+  column.headerCellStyle.textAlignment = textAlignment;
   [self.grid addColumn:column];
 }
 
