@@ -21,7 +21,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sortable" image="Sortable" id="SBR-fe-eOR" userLabel="Sort"/>
+                    <tabBarItem key="tabBarItem" title="Sortable" image="Sort" id="SBR-fe-eOR" userLabel="Sort"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="grid" destination="S7O-oc-NCx" id="oG9-l9-r8Z"/>
@@ -47,7 +47,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Editable" image="Editable" id="Kli-kA-5hJ" userLabel="Editable"/>
+                    <tabBarItem key="tabBarItem" title="Editable" image="Edit" id="Kli-kA-5hJ" userLabel="Editable"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="grid" destination="jIn-Ei-ibE" id="mSe-bE-AUo"/>
@@ -105,9 +105,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Editable" width="40" height="40"/>
-        <image name="Reorder" width="150" height="150"/>
-        <image name="Sortable" width="40" height="40"/>
+        <image name="Edit" width="25" height="25"/>
+        <image name="Reorder" width="25" height="25"/>
+        <image name="Sort" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

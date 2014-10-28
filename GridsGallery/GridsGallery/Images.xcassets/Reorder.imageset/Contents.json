@@ -3,15 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "iOS Simulator Screen Shot 27 Oct 2014 17.09.28.png"
+      "filename" : "Reorder*1.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Reorder*2.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Reorder*3.png"
     }
   ],
   "info" : {
