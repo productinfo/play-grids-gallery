@@ -34,17 +34,11 @@
 }
 
 - (void)addColumns {
-
-  static CGFloat const filmTitleColumnWidth = 350.0f;
-  static CGFloat const certificationColumnWidth =  170.0f;
-  
-  float columnWidth = ((CGRectGetWidth(self.grid.frame) - (filmTitleColumnWidth + certificationColumnWidth)) / 3);
-  
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:filmTitleColumnWidth textAlignment:NSTextAlignmentLeft];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:columnWidth textAlignment:NSTextAlignmentRight];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:columnWidth textAlignment:NSTextAlignmentLeft];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:columnWidth textAlignment:NSTextAlignmentLeft];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:certificationColumnWidth textAlignment:NSTextAlignmentLeft];
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350 textAlignment:NSTextAlignmentLeft];
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120 textAlignment:NSTextAlignmentCenter];
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103 textAlignment:NSTextAlignmentCenter];
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130 textAlignment:NSTextAlignmentLeft];
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:220 textAlignment:NSTextAlignmentLeft];
 }
 
 - (void)getData {
