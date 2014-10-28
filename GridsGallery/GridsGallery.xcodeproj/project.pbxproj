@@ -11,6 +11,7 @@
 		54004AA519F93B4000B4DF9D /* ShinobiGrids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54004AA419F93B4000B4DF9D /* ShinobiGrids.framework */; };
 		54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */; };
 		54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */; };
+		548A2B0819FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */; };
 		54DB79E219FA4D7100FC2DF9 /* GridsGallery-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */; };
 		54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */; };
 		54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */; };
@@ -50,6 +51,8 @@
 		54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryEditableGridViewController.m; sourceTree = "<group>"; };
 		54004AA919F93BCB00B4DF9D /* GridsGallerySortGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySortGridViewController.h; sourceTree = "<group>"; };
 		54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySortGridViewController.m; sourceTree = "<group>"; };
+		548A2B0619FFDE3E005571D1 /* GridsGallerySectionsGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySectionsGridViewController.h; sourceTree = "<group>"; };
+		548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySectionsGridViewController.m; sourceTree = "<group>"; };
 		54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GridsGallery-data.plist"; sourceTree = "<group>"; };
 		54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
 		54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryReorderGridViewController.m; sourceTree = "<group>"; };
@@ -103,6 +106,15 @@
 				54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */,
 			);
 			name = EditableGrid;
+			sourceTree = "<group>";
+		};
+		548A2B0519FFDE1D005571D1 /* SectionGrid */ = {
+			isa = PBXGroup;
+			children = (
+				548A2B0619FFDE3E005571D1 /* GridsGallerySectionsGridViewController.h */,
+				548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */,
+			);
+			name = SectionGrid;
 			sourceTree = "<group>";
 		};
 		54E3A3B419F817E9001AD37B /* Products */ = {
@@ -165,6 +177,7 @@
 		68171BE619ADDBC5000AFEEB /* GridsGallery */ = {
 			isa = PBXGroup;
 			children = (
+				548A2B0519FFDE1D005571D1 /* SectionGrid */,
 				54E4AB8219FE9E3400ABE4B1 /* DataSources */,
 				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
 				54004AA019F9396500B4DF9D /* EditableGrid */,
@@ -284,6 +297,7 @@
 				68171BF119ADDBC5000AFEEB /* GridsGalleryAppDelegate.m in Sources */,
 				54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */,
 				68171BED19ADDBC5000AFEEB /* main.m in Sources */,
+				548A2B0819FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m in Sources */,
 				54004AA319F93A6B00B4DF9D /* GridsGalleryCommonViewController.m in Sources */,
 				54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */,
 				54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */,

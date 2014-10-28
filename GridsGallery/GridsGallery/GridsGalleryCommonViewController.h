@@ -9,7 +9,7 @@
 #import "ShinobiPlayUtils/SPUGalleryManagedViewController.h"
 #import <ShinobiGrids/ShinobiGrids.h>
 
-@interface GridsGalleryCommonViewController : SPUGalleryManagedViewController<SDataGridDataSourceHelperDelegate>
+@interface GridsGalleryCommonViewController : SPUGalleryManagedViewController<SDataGridDataSourceHelperDelegate, SDataGridDelegate>
 
 @property (weak, nonatomic) IBOutlet ShinobiDataGrid *grid;
 @property (strong, atomic) SDataGridDataSourceHelper *dataSource;

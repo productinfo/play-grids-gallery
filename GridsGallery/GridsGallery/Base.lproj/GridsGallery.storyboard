@@ -57,6 +57,32 @@
             </objects>
             <point key="canvasLocation" x="281" y="-644"/>
         </scene>
+        <!--Sections-->
+        <scene sceneID="Q77-cL-3jz">
+            <objects>
+                <viewController storyboardIdentifier="GridsGallerySectionsGridViewController" id="qpV-aG-JNM" userLabel="Sections" customClass="GridsGallerySectionsGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WRu-kD-2U0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="oBq-Qu-1KR" customClass="ShinobiDataGrid">
+                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sections" image="Section" id="Tc3-u5-rws"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="grid" destination="oBq-Qu-1KR" id="xza-tO-oYw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qar-cX-OiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="1384"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NOl-W9-Prz">
             <objects>
@@ -71,6 +97,7 @@
                         <segue destination="ysD-1U-d7c" kind="relationship" relationship="viewControllers" id="kd0-yF-swi"/>
                         <segue destination="chu-Ad-GEj" kind="relationship" relationship="viewControllers" id="mkE-30-CuH"/>
                         <segue destination="xb8-eh-s7E" kind="relationship" relationship="viewControllers" id="gMB-aj-76c"/>
+                        <segue destination="qpV-aG-JNM" kind="relationship" relationship="viewControllers" id="FIN-Zn-c4l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ja-uI-AdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,12 +128,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeF-T8-neF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153" y="307"/>
+            <point key="canvasLocation" x="281" y="208"/>
         </scene>
     </scenes>
     <resources>
         <image name="Edit" width="25" height="25"/>
         <image name="Reorder" width="25" height="25"/>
+        <image name="Section" width="25" height="25"/>
         <image name="Sort" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

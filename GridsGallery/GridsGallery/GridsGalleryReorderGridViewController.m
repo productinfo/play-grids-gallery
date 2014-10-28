@@ -17,8 +17,6 @@
   for (SDataGridColumn *column in self.grid.columns) {
     column.canReorderViaLongPress = YES;
   }
-  
-  [super setupGrid];
 }
 
 @end
