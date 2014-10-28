@@ -1,27 +1,114 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="mGB-b9-NBg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Sort-->
+        <scene sceneID="3kb-RU-e0C">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GridsGalleryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <viewController storyboardIdentifier="GridsGallerySortableGridViewController" id="chu-Ad-GEj" userLabel="Sort" customClass="GridsGallerySortGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0O-iN-The">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="S7O-oc-NCx" customClass="ShinobiDataGrid">
+                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Sortable" image="Sortable" id="SBR-fe-eOR" userLabel="Sort"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="grid" destination="S7O-oc-NCx" id="oG9-l9-r8Z"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIS-Cw-lH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281" y="1256"/>
+        </scene>
+        <!--Editable-->
+        <scene sceneID="yIe-Uc-5N1">
+            <objects>
+                <viewController storyboardIdentifier="GridsGalleryEditableGridViewController" id="ysD-1U-d7c" customClass="GridsGalleryEditableGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ibB-d0-PC1">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="jIn-Ei-ibE" customClass="ShinobiDataGrid">
+                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Editable" image="Editable" id="Kli-kA-5hJ" userLabel="Editable"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="grid" destination="jIn-Ei-ibE" id="mSe-bE-AUo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVd-Em-ZMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="-644"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NOl-W9-Prz">
+            <objects>
+                <tabBarController id="mGB-b9-NBg" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9fu-b7-Pwp">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ysD-1U-d7c" kind="relationship" relationship="viewControllers" id="kd0-yF-swi"/>
+                        <segue destination="chu-Ad-GEj" kind="relationship" relationship="viewControllers" id="mkE-30-CuH"/>
+                        <segue destination="xb8-eh-s7E" kind="relationship" relationship="viewControllers" id="gMB-aj-76c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ja-uI-AdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707" y="-101"/>
+        </scene>
+        <!--Reorder-->
+        <scene sceneID="oeU-mB-fc8">
+            <objects>
+                <viewController storyboardIdentifier="GridsGalleryReorderGridViewController" id="xb8-eh-s7E" customClass="GridsGalleryReorderGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xV-a9-1w8">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="aEh-fS-3m3" customClass="ShinobiDataGrid">
+                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reorder" image="Reorder" id="MbN-rW-Bi7" userLabel="Reorder"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="grid" destination="aEh-fS-3m3" id="OP8-im-cUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeF-T8-neF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="307"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Editable" width="40" height="40"/>
+        <image name="Reorder" width="150" height="150"/>
+        <image name="Sortable" width="40" height="40"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
