@@ -7,15 +7,14 @@
 //
 
 #import "GridsGalleryReorderGridViewController.h"
-//#import "GridsGallerySortableGridDataSourceHelperDelegate.h"
 
 @implementation GridsGalleryReorderGridViewController
 
--(void)setupGrid{
+- (void)setupGrid {
   // Allow rows to be reordered with a long press
-  grid.canReorderRows = YES;
+  self.grid.canReorderRows = YES;
   // Allow columns to be reordered with a long press
-  for (SDataGridColumn *column in grid.columns) {
+  for (SDataGridColumn *column in self.grid.columns) {
     column.canReorderViaLongPress = YES;
   }
   

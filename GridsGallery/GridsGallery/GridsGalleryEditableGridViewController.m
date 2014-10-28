@@ -11,9 +11,9 @@
 
 @implementation GridsGalleryEditableGridViewController
 
--(void)setupGrid{
+- (void)setupGrid {
   // Enable editing on all columns
-  for (SDataGridColumn *column in grid.columns) {
+  for (SDataGridColumn *column in self.grid.columns) {
     column.editable = YES;
   }
   

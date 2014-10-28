@@ -8,6 +8,6 @@
 
 #import "GridsGalleryCommonViewController.h"
 
-@interface GridsGallerySortGridViewController : GridsGalleryCommonViewController<SDataGridDataSourceHelperDelegate>
+@interface GridsGallerySortGridViewController : GridsGalleryCommonViewController
 
 @end
