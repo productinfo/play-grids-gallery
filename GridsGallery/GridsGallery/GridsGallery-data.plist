@@ -12,7 +12,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>4</integer>
+		<integer>83</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -26,7 +26,7 @@
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
-		<integer>4</integer>
+		<integer>88</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -40,7 +40,7 @@
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>92</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -54,7 +54,7 @@
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>96</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -68,7 +68,7 @@
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
-		<integer>4</integer>
+		<integer>89</integer>
 		<key>certification</key>
 		<string>PG</string>
 	</dict>
@@ -82,7 +82,7 @@
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
-		<integer>4</integer>
+		<integer>78</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -96,7 +96,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>2</integer>
+		<integer>36</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -110,7 +110,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>94</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -124,7 +124,7 @@
 		<key>genre</key>
 		<string>Mystery</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>92</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -138,7 +138,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>1</integer>
+		<integer>18</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -152,7 +152,7 @@
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
-		<integer>4</integer>
+		<integer>88</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -166,7 +166,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>3</integer>
+		<integer>54</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -180,7 +180,7 @@
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>99</integer>
 		<key>certification</key>
 		<string>G</string>
 	</dict>
@@ -194,7 +194,7 @@
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
-		<integer>2</integer>
+		<integer>33</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>
@@ -208,7 +208,7 @@
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
-		<integer>5</integer>
+		<integer>93</integer>
 		<key>certification</key>
 		<string>PG-13</string>
 	</dict>

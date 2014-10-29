@@ -34,11 +34,8 @@
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350 textAlignment:NSTextAlignmentLeft];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120 textAlignment:NSTextAlignmentCenter];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103 textAlignment:NSTextAlignmentCenter];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130 textAlignment:NSTextAlignmentLeft];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:220 textAlignment:NSTextAlignmentLeft];
+  // Add an implementation in subclasses for any grid setup code that should be called
+  // when a grid is recreated
 }
 
 - (void)getData {
@@ -49,16 +46,7 @@
   }
 }
 
-#pragma mark - Datasource helper methods
-
-- (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
-  if ([propertyKey isEqualToString:@"gross"]) {
-    // We use this method to convert the gross int value into a string
-    int gross = [[object valueForKey:propertyKey] intValue];
-    return [self getGrossStringForValue:gross];
-  }
-  return nil;
-}
+#pragma mark - Utility methods
 
 - (NSString*)getGrossStringForValue:(int)value {
   // Convert our int value into a formatted string (e.g 1234 becomes $1,234M)
@@ -67,13 +55,15 @@
   return [numberFormatter stringFromNumber:[NSNumber numberWithInt:value]];
 }
 
-#pragma mark - Utility methods
-
-- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey width:(float)width textAlignment:(NSTextAlignment)textAlignment{
+- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey width:(float)width textAlignment:(NSTextAlignment)textAlignment titleAlignment:(NSTextAlignment)titleAlignment cellType:(Class)cellType{
   SDataGridColumn *column = [[SDataGridColumn alloc] initWithTitle:title];
   column.propertyKey = propertyKey;
   column.width = @(width);
   column.cellStyle.textAlignment = textAlignment;
+  column.headerCellStyle.textAlignment = titleAlignment;
+  if (cellType) {
+    column.cellType = cellType;
+  }
   [self.grid addColumn:column];
 }
 

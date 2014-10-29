@@ -1,5 +1,5 @@
 //
-//  GridsGallerySectionsGridViewController.h
+//  GridsGalleryCustomCellGridViewController.h
 //  GridsGallery
 //
 //  Created by Daniel Allsop on 28/10/2014.
@@ -8,6 +8,6 @@
 
 #import "GridsGalleryCommonViewController.h"
 
-@interface GridsGallerySectionsGridViewController : GridsGalleryCommonViewController
+@interface GridsGalleryCustomCellGridViewController : GridsGalleryCommonViewController<SDataGridDataSourceHelperDelegate>
 
 @end

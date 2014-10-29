@@ -83,6 +83,32 @@
             </objects>
             <point key="canvasLocation" x="-681" y="1384"/>
         </scene>
+        <!--CustomCell-->
+        <scene sceneID="4cE-uH-BNg">
+            <objects>
+                <viewController storyboardIdentifier="GridsGalleryCustomCellGridViewController" id="GPa-xc-ZkV" userLabel="CustomCell" customClass="GridsGalleryCustomCellGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xhz-Ma-QTz">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="1ex-Fx-5eT" customClass="ShinobiDataGrid">
+                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Custom Cell" image="CustomCell" id="cEp-w4-SXg"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="grid" destination="1ex-Fx-5eT" id="jZG-l9-x9N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCg-8P-i9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781" y="2583"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NOl-W9-Prz">
             <objects>
@@ -98,6 +124,7 @@
                         <segue destination="chu-Ad-GEj" kind="relationship" relationship="viewControllers" id="mkE-30-CuH"/>
                         <segue destination="xb8-eh-s7E" kind="relationship" relationship="viewControllers" id="gMB-aj-76c"/>
                         <segue destination="qpV-aG-JNM" kind="relationship" relationship="viewControllers" id="FIN-Zn-c4l"/>
+                        <segue destination="GPa-xc-ZkV" kind="relationship" relationship="viewControllers" id="hbt-62-1Su"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ja-uI-AdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CustomCell" width="25" height="5"/>
         <image name="Edit" width="25" height="25"/>
         <image name="Reorder" width="25" height="25"/>
         <image name="Section" width="25" height="25"/>

@@ -9,4 +9,5 @@
 #import "GridsGalleryCommonViewController.h"
 
 @interface GridsGalleryReorderGridViewController : GridsGalleryCommonViewController
+
 @end
