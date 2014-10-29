@@ -10,46 +10,44 @@
 
 @implementation GridsGalleryCertificationCell
 
-- (void)setCertification:(NSString *)certification {
-  
-  UITextField *certificateRating = [UITextField new];
-  certificateRating .font = [UIFont fontWithName:@"Superclarendon-Black" size:30];
-  certificateRating .text = certification;
-  [self addSubview:certificateRating ];
-  
-  UILabel *certificateDescription = [UILabel new];
-  certificateDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
-  certificateDescription.textAlignment = NSTextAlignmentCenter;
-  certificateDescription.lineBreakMode = NSLineBreakByWordWrapping;
-  certificateDescription.numberOfLines = 3;
-  [self addSubview:certificateDescription];
-  
-  if ([certification isEqualToString:@"G"]) {
-    certificateRating .textColor =[UIColor colorWithRed:1.0f/255 green:106.0f/255 blue:49.0f/255 alpha:1];
-    certificateDescription.text = @"GENERAL\nAUDIENCES";
-  } else if ([certification isEqualToString:@"PG"]) {
-    certificateRating .textColor = [UIColor colorWithRed:242.0f/255 green:90.0f/255 blue:56.0f/255 alpha:1];
-    certificateDescription.text = @"PARENTAL\nGUIDANCE\nSUGGESTED";
+-(id)initWithReuseIdentifier:(NSString *)identifier {
+  if (self = [super initWithReuseIdentifier:identifier]) {
+    self.certificateRating = [UILabel new];
+    self.certificateRating.font = [UIFont fontWithName:@"Superclarendon-Black" size:30];
+    [self addSubview:self.certificateRating];
     
-  } else if ([certification isEqualToString:@"PG-13"]) {
-    certificateRating .textColor = [UIColor colorWithRed:118.0f/255 green:64.0f/255 blue:146.0f/255 alpha:1];
-    certificateDescription.text = @"PARENTS\nSTRONGLY\nCAUTIONED";
+    self.certificateDescription = [UILabel new];
+    self.certificateDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+    self.certificateDescription.textAlignment = NSTextAlignmentCenter;
+    self.certificateDescription.lineBreakMode = NSLineBreakByWordWrapping;
+    self.certificateDescription.numberOfLines = 3;
+    [self addSubview:self.certificateDescription];
   }
-  
-  [certificateRating sizeToFit];
-  [certificateDescription sizeToFit];
-  
-  certificateRating.center = CGPointMake(80, 22);
-  certificateDescription.center = CGPointMake(170, 22);
-  
-  certificateDescription.frame = CGRectIntegral(certificateDescription.frame);
+  return self;
 }
 
-- (void)resetForReuse {
-  [super resetForReuse];
-  for (UIView *subview in self.subviews) {
-    [subview removeFromSuperview];
+- (void)setCertification:(NSString *)certification {
+  self.certificateRating.text = certification;
+  
+  if ([certification isEqualToString:@"G"]) {
+    self.certificateRating.textColor =[UIColor colorWithRed:1.0f/255 green:106.0f/255 blue:49.0f/255 alpha:1];
+    self.certificateDescription.text = @"GENERAL\nAUDIENCES";
+  } else if ([certification isEqualToString:@"PG"]) {
+    self.certificateRating.textColor = [UIColor colorWithRed:242.0f/255 green:90.0f/255 blue:56.0f/255 alpha:1];
+    self.certificateDescription.text = @"PARENTAL\nGUIDANCE\nSUGGESTED";
+    
+  } else if ([certification isEqualToString:@"PG-13"]) {
+    self.certificateRating.textColor = [UIColor colorWithRed:118.0f/255 green:64.0f/255 blue:146.0f/255 alpha:1];
+    self.certificateDescription.text = @"PARENTS\nSTRONGLY\nCAUTIONED";
   }
+  
+  [self.certificateRating sizeToFit];
+  [self.certificateDescription sizeToFit];
+  
+  self.certificateRating.center = CGPointMake(80, 22);
+  self.certificateDescription.center = CGPointMake(170, 22);
+  
+  self.certificateDescription.frame = CGRectIntegral(self.certificateDescription.frame);
 }
 
 @end

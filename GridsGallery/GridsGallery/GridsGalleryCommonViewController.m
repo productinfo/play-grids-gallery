@@ -34,8 +34,7 @@
 }
 
 - (void)addColumns {
-  // Add an implementation in subclasses for any grid setup code that should be called
-  // when a grid is recreated
+  // Add an implementation in subclasses for any column setup code
 }
 
 - (void)getData {

@@ -28,13 +28,13 @@
 - (BOOL)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper populateCell:(SDataGridCell *)cell withValue:(id)value forProperty:(NSString *)propertyKey sourceObject:(id)object {
   if ([propertyKey isEqualToString:@"rating"]) {
     GridsGalleryRatingCell *ratingCell = (GridsGalleryRatingCell*)cell;
-    [ratingCell setRating:[[object valueForKey:@"rating"] intValue]];
+    [ratingCell setRating:[object[@"rating"] intValue]];
     return YES;
   }
   
   if ([propertyKey isEqualToString:@"certification"]) {
     GridsGalleryCertificationCell *certificationCell = (GridsGalleryCertificationCell*)cell;
-    [certificationCell setCertification:[object valueForKey:@"certification"]];
+    [certificationCell setCertification:object[@"certification"]];
     return YES;
   }
   

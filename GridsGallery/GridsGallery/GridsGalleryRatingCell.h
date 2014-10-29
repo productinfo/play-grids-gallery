@@ -10,6 +10,9 @@
 
 @interface GridsGalleryRatingCell : SDataGridCell
 
+@property UIView *goldRating;
+@property UIView *grayRating;
+
 - (void)setRating:(int)rating;
 
 @end

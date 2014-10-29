@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet ShinobiDataGrid *grid;
 @property (strong, atomic) SDataGridDataSourceHelper *dataSource;
 @property (strong, atomic) NSArray *data;
-@property (strong, atomic) UITextView *descriptionText;
 
 - (void)setupGrid;
 - (void)addColumns;

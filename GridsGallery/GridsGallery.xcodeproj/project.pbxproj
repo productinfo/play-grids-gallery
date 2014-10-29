@@ -139,20 +139,12 @@
 		548A2B0A19FFF0A6005571D1 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				548A2B0E19FFF254005571D1 /* Graphics */,
 				548A2B0F19FFF276005571D1 /* GridsGalleryRatingCell.h */,
 				548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */,
 				548A2B1219FFF284005571D1 /* GridsGalleryCertificationCell.h */,
 				548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */,
 			);
 			name = CustomCells;
-			sourceTree = "<group>";
-		};
-		548A2B0E19FFF254005571D1 /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Graphics;
 			sourceTree = "<group>";
 		};
 		54E3A3B419F817E9001AD37B /* Products */ = {

@@ -8,7 +8,15 @@
 
 #import "GridsGalleryRatingCell.h"
 
-@implementation GridsGalleryRatingCell;
+@implementation GridsGalleryRatingCell
+
+-(id)initWithReuseIdentifier:(NSString *)identifier {
+  if (self = [super initWithReuseIdentifier:identifier]) {
+    self.goldRating = [self initializeRatingView:self.goldRating withBackgroundColor:[UIColor colorWithRed:255.0f/255 green:175.0f/255 blue:4.0f/255 alpha:1]];
+    self.grayRating = [self initializeRatingView:self.grayRating withBackgroundColor:[UIColor colorWithRed:202.0f/255 green:204.0f/255 blue:204.0f/255 alpha:1]];
+  }
+  return self;
+}
 
 - (void)setRating:(int)rating {
   
@@ -20,12 +28,10 @@
   const CGFloat insetY = 10;
   
   // shows how many star the film has been rated
-  [self addRatingViewWithFrame:CGRectMake(insetX, insetY, ratingWidth, starImage.size.height) andBackgroundColor:[UIColor colorWithRed:255.0f/255 green:175.0f/255 blue:4.0f/255 alpha:1]];
+  self.goldRating.frame = CGRectMake(insetX, insetY, ratingWidth, starImage.size.height);
   
   // fills the remaing stars in gray
-  if(ratingWidth < width){
-    [self addRatingViewWithFrame:CGRectMake(ratingWidth + insetX, insetY, (width - ratingWidth), starImage.size.height) andBackgroundColor:[UIColor colorWithRed:202.0f/255 green:204.0f/255 blue:204.0f/255 alpha:1]];
-  }
+  self.grayRating.frame = CGRectMake(ratingWidth + insetX, insetY, (width - ratingWidth), starImage.size.height);
   
   for (int i = 0; i < 5; i++) {
     UIImageView *star = [[UIImageView alloc] init];
@@ -36,20 +42,13 @@
   }
 }
 
-- (void)resetForReuse {
-  [super resetForReuse];
-  for (UIView *subview in self.subviews) {
-    [subview removeFromSuperview];
-  }
-}
-
 #pragma mark - Utility methods
 
-- (void)addRatingViewWithFrame:(CGRect)frame andBackgroundColor:(UIColor*)color {
-  UIView *ratingView = [UIView new];
-  ratingView.backgroundColor = color;
-  ratingView.frame = frame;
-  [self addSubview:ratingView];
+- (UIView*)initializeRatingView:(UIView*)uiView withBackgroundColor:(UIColor*)color {
+  uiView = [UIView new];
+  uiView.backgroundColor = color;
+  [self addSubview:uiView];
+  return uiView;
 }
 
 @end
