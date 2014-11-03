@@ -34,7 +34,7 @@
 - (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
   if ([propertyKey isEqualToString:@"gross"]) {
     // We use this method to convert the gross int value into a string
-    int gross = [[object valueForKey:propertyKey] intValue];
+    int gross = [object[propertyKey] intValue];
     return [super getGrossStringForValue:gross];
   }
   return nil;

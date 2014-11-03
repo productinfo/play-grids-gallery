@@ -34,7 +34,11 @@
 }
 
 - (void)addColumns {
-  // Add an implementation in subclasses for any column setup code
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120 textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103 textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:220 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
 }
 
 - (void)getData {
@@ -43,6 +47,17 @@
   if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
     self.data = [[NSArray alloc] initWithContentsOfFile:path];
   }
+}
+
+#pragma mark - Datasource helper methods
+
+- (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
+  if ([propertyKey isEqualToString:@"gross"]) {
+    // We use this method to convert the gross int value into a string
+    int gross = [object[propertyKey] intValue];
+    return [self getGrossStringForValue:gross];
+  }
+  return nil;
 }
 
 #pragma mark - Utility methods
