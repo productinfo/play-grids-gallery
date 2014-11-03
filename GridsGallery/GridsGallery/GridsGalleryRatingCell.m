@@ -8,6 +8,14 @@
 
 #import "GridsGalleryRatingCell.h"
 
+@interface GridsGalleryRatingCell ()
+
+@property UIView *goldRating;
+@property UIView *grayRating;
+@property  UIImage *starImage;
+
+@end
+
 @implementation GridsGalleryRatingCell
 
 const CGFloat insetX = 15;

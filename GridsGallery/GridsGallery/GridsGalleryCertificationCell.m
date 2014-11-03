@@ -8,6 +8,13 @@
 
 #import "GridsGalleryCertificationCell.h"
 
+@interface GridsGalleryCertificationCell ()
+
+@property UILabel *certificateRating;
+@property UILabel *certificateDescription;
+
+@end
+
 @implementation GridsGalleryCertificationCell
 
 -(id)initWithReuseIdentifier:(NSString *)identifier {

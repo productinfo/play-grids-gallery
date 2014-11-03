@@ -129,6 +129,9 @@
 		548A2B0919FFF096005571D1 /* CustomCellGrid */ = {
 			isa = PBXGroup;
 			children = (
+				54004A9D19F9395800B4DF9D /* SortGrid */,
+				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
+				54004AA019F9396500B4DF9D /* EditableGrid */,
 				548A2B0A19FFF0A6005571D1 /* CustomCells */,
 				548A2B0B19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.h */,
 				548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */,
@@ -210,9 +213,6 @@
 				548A2B0919FFF096005571D1 /* CustomCellGrid */,
 				548A2B0519FFDE1D005571D1 /* SectionGrid */,
 				54E4AB8219FE9E3400ABE4B1 /* DataSources */,
-				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
-				54004AA019F9396500B4DF9D /* EditableGrid */,
-				54004A9D19F9395800B4DF9D /* SortGrid */,
 				68171BEF19ADDBC5000AFEEB /* GridsGalleryAppDelegate.h */,
 				68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */,
 				68171BF219ADDBC5000AFEEB /* GridsGallery.storyboard */,

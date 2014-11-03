@@ -10,9 +10,6 @@
 
 @interface GridsGalleryCertificationCell : SDataGridCell
 
-@property UILabel *certificateRating;
-@property UILabel *certificateDescription;
-
 - (void)setCertification:(NSString*)certification;
 
 @end
