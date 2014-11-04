@@ -20,6 +20,7 @@
 //
 
 #import "GridsGalleryCertificationCell.h"
+#import "UIColor+CustomColor.h"
 
 @interface GridsGalleryCertificationCell ()
 
@@ -50,22 +51,22 @@
   self.certificateRating.text = certification;
   
   if ([certification isEqualToString:@"G"]) {
-    self.certificateRating.textColor =[UIColor colorWithRed:1.0f/255 green:106.0f/255 blue:49.0f/255 alpha:1];
+    self.certificateRating.textColor = [UIColor gCertificateRating];
     self.certificateDescription.text = @"GENERAL\nAUDIENCES";
   } else if ([certification isEqualToString:@"PG"]) {
-    self.certificateRating.textColor = [UIColor colorWithRed:242.0f/255 green:90.0f/255 blue:56.0f/255 alpha:1];
+    self.certificateRating.textColor = [UIColor pgCertificateRating];
     self.certificateDescription.text = @"PARENTAL\nGUIDANCE\nSUGGESTED";
     
   } else if ([certification isEqualToString:@"PG-13"]) {
-    self.certificateRating.textColor = [UIColor colorWithRed:118.0f/255 green:64.0f/255 blue:146.0f/255 alpha:1];
+    self.certificateRating.textColor = [UIColor pg13CertificateRating];
     self.certificateDescription.text = @"PARENTS\nSTRONGLY\nCAUTIONED";
   }
   
   [self.certificateRating sizeToFit];
   [self.certificateDescription sizeToFit];
   
-  self.certificateRating.center = CGPointMake(80, 22);
-  self.certificateDescription.center = CGPointMake(170, 22);
+  self.certificateRating.center = CGPointMake(65, 22);
+  self.certificateDescription.center = CGPointMake(155, 22);
   
   self.certificateDescription.frame = CGRectIntegral(self.certificateDescription.frame);
 }

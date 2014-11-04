@@ -15,6 +15,7 @@
 		548A2B0D19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */; };
 		548A2B1119FFF276005571D1 /* GridsGalleryRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */; };
 		548A2B1419FFF284005571D1 /* GridsGalleryCertificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */; };
+		54D700E11A090D68005FE178 /* UIColor+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D700E01A090D68005FE178 /* UIColor+CustomColor.m */; };
 		54DB79E219FA4D7100FC2DF9 /* GridsGallery-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */; };
 		54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */; };
 		54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */; };
@@ -62,6 +63,8 @@
 		548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryRatingCell.m; sourceTree = "<group>"; };
 		548A2B1219FFF284005571D1 /* GridsGalleryCertificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCertificationCell.h; sourceTree = "<group>"; };
 		548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryCertificationCell.m; sourceTree = "<group>"; };
+		54D700DF1A090D68005FE178 /* UIColor+CustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColor.h"; sourceTree = "<group>"; };
+		54D700E01A090D68005FE178 /* UIColor+CustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColor.m"; sourceTree = "<group>"; };
 		54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GridsGallery-data.plist"; sourceTree = "<group>"; };
 		54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
 		54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryReorderGridViewController.m; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				54004AA219F93A6B00B4DF9D /* GridsGalleryCommonViewController.m */,
 				68171BF819ADDBC5000AFEEB /* Images.xcassets */,
 				68171BE719ADDBC5000AFEEB /* Supporting Files */,
+				54D700DF1A090D68005FE178 /* UIColor+CustomColor.h */,
+				54D700E01A090D68005FE178 /* UIColor+CustomColor.m */,
 			);
 			path = GridsGallery;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D700E11A090D68005FE178 /* UIColor+CustomColor.m in Sources */,
 				68171BF119ADDBC5000AFEEB /* GridsGalleryAppDelegate.m in Sources */,
 				54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */,
 				68171BED19ADDBC5000AFEEB /* main.m in Sources */,

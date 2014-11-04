@@ -25,14 +25,19 @@
 @interface GridsGalleryCommonViewController : SPUGalleryManagedViewController<SDataGridDataSourceHelperDelegate>
 
 @property (weak, nonatomic) IBOutlet ShinobiDataGrid *grid;
-@property (strong, atomic) SDataGridDataSourceHelper *dataSource;
-@property (strong, atomic) NSArray *data;
+@property (strong, nonatomic) SDataGridDataSourceHelper *dataSource;
+@property (strong, nonatomic) NSArray *data;
 
 - (void)setupGrid;
 - (void)addColumns;
 
 #pragma mark - Utility methods
 - (NSString*)getGrossStringForValue:(int)value;
-- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey width:(float)width textAlignment:(NSTextAlignment)textAlignment titleAlignment:(NSTextAlignment)textAlignment cellType:(Class)cellType;
+- (void)addColumnWithTitle:(NSString*)title
+               propertyKey:(NSString*)propertyKey
+                     width:(float)width
+             textAlignment:(NSTextAlignment)textAlignment
+            titleAlignment:(NSTextAlignment)textAlignment
+                  cellType:(Class)cellType;
 
 @end

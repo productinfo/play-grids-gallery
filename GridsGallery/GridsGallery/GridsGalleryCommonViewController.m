@@ -47,11 +47,16 @@
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120 textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103 textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:220 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350
+             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120
+             textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103
+             textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130
+             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:192
+             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
 }
 
 - (void)getData {
@@ -64,7 +69,8 @@
 
 #pragma mark - Datasource helper methods
 
-- (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
+- (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper
+       displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
   if ([propertyKey isEqualToString:@"gross"]) {
     // We use this method to convert the gross int value into a string
     int gross = [object[propertyKey] intValue];
@@ -76,13 +82,22 @@
 #pragma mark - Utility methods
 
 - (NSString*)getGrossStringForValue:(int)value {
+  static NSNumberFormatter *numberFormatter = nil;
+  
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+  });
+  
   // Convert our int value into a formatted string (e.g 1234 becomes $1,234M)
-  NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
   [numberFormatter setPositiveFormat:@"$#,###M"];
   return [numberFormatter stringFromNumber:[NSNumber numberWithInt:value]];
 }
 
-- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey width:(float)width textAlignment:(NSTextAlignment)textAlignment titleAlignment:(NSTextAlignment)titleAlignment cellType:(Class)cellType{
+- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey
+                     width:(float)width textAlignment:(NSTextAlignment)textAlignment
+            titleAlignment:(NSTextAlignment)titleAlignment cellType:(Class)cellType{
   SDataGridColumn *column = [[SDataGridColumn alloc] initWithTitle:title];
   column.propertyKey = propertyKey;
   column.width = @(width);

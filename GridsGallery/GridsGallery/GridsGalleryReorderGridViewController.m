@@ -26,6 +26,7 @@
 - (void)setupGrid {
   // Allow rows to be reordered with a long press
   self.grid.canReorderRows = YES;
+  
   // Allow columns to be reordered with a long press
   for (SDataGridColumn *column in self.grid.columns) {
     column.canReorderViaLongPress = YES;

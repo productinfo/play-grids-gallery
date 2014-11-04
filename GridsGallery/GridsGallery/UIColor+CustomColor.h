@@ -1,8 +1,8 @@
 //
-//  GridsGallerySortGridViewController.m
+//  UIColor+CustomColor.h
 //  GridsGallery
 //
-//  Created by Daniel Allsop on 23/10/2014.
+//  Created by Daniel Allsop on 04/11/2014.
 //
 //  Copyright 2014 Scott Logic
 //
@@ -19,21 +19,12 @@
 //  limitations under the License.
 //
 
-#import "GridsGallerySortGridViewController.h"
-//#import "GridsGallerySortableGridDataSourceHelperDelegate.h"
+@interface UIColor (CustomColor)
 
-@implementation GridsGallerySortGridViewController
-
-- (void)setupGrid {
-  NSArray *columns = self.grid.columns;
-  
-  // Set the second column's sort mode to bi state
-  SDataGridColumn *secondColumn = columns[1];
-  secondColumn.sortMode = SDataGridColumnSortModeBiState;
-  
-  // Set the third column's sort mode to tri state
-  SDataGridColumn *thirdColumn = columns[2];
-  thirdColumn.sortMode = SDataGridColumnSortModeTriState;
-}
++ (UIColor*)gCertificateRating;
++ (UIColor*)pgCertificateRating;
++ (UIColor*)pg13CertificateRating;
++ (UIColor*)startRating;
++ (UIColor*)emptyStartRating;
 
 @end

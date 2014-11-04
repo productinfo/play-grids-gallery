@@ -29,11 +29,18 @@
 }
 
 - (void)addColumns {
-  [super addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [super addColumnWithTitle:@"Year" propertyKey:@"year" width:90 textAlignment:NSTextAlignmentRight titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [super addColumnWithTitle:@"Genre" propertyKey:@"genre" width:120 textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [super addColumnWithTitle:@"Rating" propertyKey:@"rating" width:150 textAlignment:NSTextAlignmentRight titleAlignment:NSTextAlignmentCenter cellType:[GridsGalleryRatingCell class]];
-  [super addColumnWithTitle:@"Certification" propertyKey:@"certification" width:213 textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentCenter cellType:[GridsGalleryCertificationCell class]];
+  [super addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350
+              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [super addColumnWithTitle:@"Year" propertyKey:@"year" width:90
+              textAlignment:NSTextAlignmentRight titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [super addColumnWithTitle:@"Genre" propertyKey:@"genre" width:120
+              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [super addColumnWithTitle:@"Rating" propertyKey:@"rating" width:140
+              textAlignment:NSTextAlignmentRight titleAlignment:NSTextAlignmentCenter
+                   cellType:[GridsGalleryRatingCell class]];
+  [super addColumnWithTitle:@"Certification" propertyKey:@"certification" width:195
+              textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentCenter
+                   cellType:[GridsGalleryCertificationCell class]];
 }
 
 #pragma mark - Datasource helper delegate methods
