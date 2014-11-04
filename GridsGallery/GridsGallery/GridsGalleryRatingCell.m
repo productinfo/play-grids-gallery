@@ -20,7 +20,7 @@
 //
 
 #import "GridsGalleryRatingCell.h"
-#import "UIColor+CustomColor.h"
+#import "UIColor+GridsGalleryColor.h"
 
 @interface GridsGalleryRatingCell ()
 
@@ -38,10 +38,10 @@ const CGFloat insetY = 10;
 -(id)initWithReuseIdentifier:(NSString *)identifier {
   if (self = [super initWithReuseIdentifier:identifier]) {
     self.starRating = [self initializeRatingView:self.starRating
-                             withBackgroundColor:[UIColor startRating]];
+                             withBackgroundColor:[UIColor startRatingColor]];
     
     self.emptyRating = [self initializeRatingView:self.emptyRating
-                             withBackgroundColor:[UIColor emptyStartRating]];
+                             withBackgroundColor:[UIColor emptyStartRatingColor]];
     
     self.starImage = [UIImage imageNamed:@"star_hollow.png"];
     for (int i = 0; i < 5; i++) {

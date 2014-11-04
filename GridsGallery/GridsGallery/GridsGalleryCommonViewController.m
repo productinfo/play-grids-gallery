@@ -88,10 +88,11 @@
   dispatch_once(&onceToken, ^{
     numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    // Convert our int value into a formatted string (e.g 1234 becomes $1,234M)
+    [numberFormatter setPositiveFormat:@"$#,###M"];
   });
   
-  // Convert our int value into a formatted string (e.g 1234 becomes $1,234M)
-  [numberFormatter setPositiveFormat:@"$#,###M"];
   return [numberFormatter stringFromNumber:[NSNumber numberWithInt:value]];
 }
 

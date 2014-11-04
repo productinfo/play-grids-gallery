@@ -1,5 +1,5 @@
 //
-//  UIColor+CustomColor.h
+//  UIColor+GridsGalleryColor.h
 //  GridsGallery
 //
 //  Created by Daniel Allsop on 04/11/2014.
@@ -19,12 +19,12 @@
 //  limitations under the License.
 //
 
-@interface UIColor (CustomColor)
+@interface UIColor (GridsGalleryColor)
 
-+ (UIColor*)gCertificateRating;
-+ (UIColor*)pgCertificateRating;
-+ (UIColor*)pg13CertificateRating;
-+ (UIColor*)startRating;
-+ (UIColor*)emptyStartRating;
++ (UIColor*)gCertificateRatingColor;
++ (UIColor*)pgCertificateRatingColor;
++ (UIColor*)pg13CertificateRatingColor;
++ (UIColor*)startRatingColor;
++ (UIColor*)emptyStartRatingColor;
 
 @end

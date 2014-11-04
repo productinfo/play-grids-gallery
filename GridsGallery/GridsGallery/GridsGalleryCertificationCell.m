@@ -20,7 +20,7 @@
 //
 
 #import "GridsGalleryCertificationCell.h"
-#import "UIColor+CustomColor.h"
+#import "UIColor+GridsGalleryColor.h"
 
 @interface GridsGalleryCertificationCell ()
 
@@ -51,14 +51,14 @@
   self.certificateRating.text = certification;
   
   if ([certification isEqualToString:@"G"]) {
-    self.certificateRating.textColor = [UIColor gCertificateRating];
+    self.certificateRating.textColor = [UIColor gCertificateRatingColor];
     self.certificateDescription.text = @"GENERAL\nAUDIENCES";
   } else if ([certification isEqualToString:@"PG"]) {
-    self.certificateRating.textColor = [UIColor pgCertificateRating];
+    self.certificateRating.textColor = [UIColor pgCertificateRatingColor];
     self.certificateDescription.text = @"PARENTAL\nGUIDANCE\nSUGGESTED";
     
   } else if ([certification isEqualToString:@"PG-13"]) {
-    self.certificateRating.textColor = [UIColor pg13CertificateRating];
+    self.certificateRating.textColor = [UIColor pg13CertificateRatingColor];
     self.certificateDescription.text = @"PARENTS\nSTRONGLY\nCAUTIONED";
   }
   
