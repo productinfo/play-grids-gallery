@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54E3A3AD19F7FA13001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */; };
+		54004AA319F93A6B00B4DF9D /* GridsGalleryCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AA219F93A6B00B4DF9D /* GridsGalleryCommonViewController.m */; };
+		54004AA519F93B4000B4DF9D /* ShinobiGrids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54004AA419F93B4000B4DF9D /* ShinobiGrids.framework */; };
+		54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */; };
+		54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */; };
+		548A2B0819FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */; };
+		548A2B0D19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */; };
+		548A2B1119FFF276005571D1 /* GridsGalleryRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */; };
+		548A2B1419FFF284005571D1 /* GridsGalleryCertificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */; };
+		54D700E11A090D68005FE178 /* UIColor+GridsGalleryColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D700E01A090D68005FE178 /* UIColor+GridsGalleryColor.m */; };
+		54DB79E219FA4D7100FC2DF9 /* GridsGallery-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */; };
+		54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */; };
+		54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */; };
 		68171BE119ADDBC5000AFEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE019ADDBC5000AFEEB /* Foundation.framework */; };
 		68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */; };
 		68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE419ADDBC5000AFEEB /* UIKit.framework */; };
@@ -15,22 +26,21 @@
 		68171BED19ADDBC5000AFEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68171BEC19ADDBC5000AFEEB /* main.m */; };
 		68171BF119ADDBC5000AFEEB /* GridsGalleryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */; };
 		68171BF419ADDBC5000AFEEB /* GridsGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68171BF219ADDBC5000AFEEB /* GridsGallery.storyboard */; };
-		68171BF719ADDBC5000AFEEB /* GridsGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68171BF619ADDBC5000AFEEB /* GridsGalleryViewController.m */; };
 		68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68171BF819ADDBC5000AFEEB /* Images.xcassets */; };
 		68171C1619ADDC04000AFEEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171C1519ADDC04000AFEEB /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		54E3A3A919F7F854001AD37B /* PBXContainerItemProxy */ = {
+		54E3A3B819F817E9001AD37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+			containerPortal = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68793C011959855D009C17BD;
 			remoteInfo = ShinobiPlayUtils;
 		};
-		54E3A3AB19F7F854001AD37B /* PBXContainerItemProxy */ = {
+		54E3A3BA19F817E9001AD37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+			containerPortal = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68793C111959855E009C17BD;
 			remoteInfo = ShinobiPlayUtilsTests;
@@ -38,20 +48,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
+		54004AA119F93A6B00B4DF9D /* GridsGalleryCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCommonViewController.h; sourceTree = "<group>"; };
+		54004AA219F93A6B00B4DF9D /* GridsGalleryCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryCommonViewController.m; sourceTree = "<group>"; };
+		54004AA419F93B4000B4DF9D /* ShinobiGrids.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiGrids.framework; path = Library/Frameworks/ShinobiGrids.framework; sourceTree = DEVELOPER_DIR; };
+		54004AA619F93BB300B4DF9D /* GridsGalleryEditableGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryEditableGridViewController.h; sourceTree = "<group>"; };
+		54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryEditableGridViewController.m; sourceTree = "<group>"; };
+		54004AA919F93BCB00B4DF9D /* GridsGallerySortGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySortGridViewController.h; sourceTree = "<group>"; };
+		54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySortGridViewController.m; sourceTree = "<group>"; };
+		548A2B0619FFDE3E005571D1 /* GridsGallerySectionsGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySectionsGridViewController.h; sourceTree = "<group>"; };
+		548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySectionsGridViewController.m; sourceTree = "<group>"; };
+		548A2B0B19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCustomCellGridViewController.h; sourceTree = "<group>"; };
+		548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryCustomCellGridViewController.m; sourceTree = "<group>"; };
+		548A2B0F19FFF276005571D1 /* GridsGalleryRatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryRatingCell.h; sourceTree = "<group>"; };
+		548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryRatingCell.m; sourceTree = "<group>"; };
+		548A2B1219FFF284005571D1 /* GridsGalleryCertificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCertificationCell.h; sourceTree = "<group>"; };
+		548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryCertificationCell.m; sourceTree = "<group>"; };
+		54D700DF1A090D68005FE178 /* UIColor+GridsGalleryColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GridsGalleryColor.h"; sourceTree = "<group>"; };
+		54D700E01A090D68005FE178 /* UIColor+GridsGalleryColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GridsGalleryColor.m"; sourceTree = "<group>"; };
+		54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GridsGallery-data.plist"; sourceTree = "<group>"; };
+		54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
+		54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryReorderGridViewController.m; sourceTree = "<group>"; };
+		54E4AB7E19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryReorderGridViewController.h; sourceTree = "<group>"; };
 		68171BDD19ADDBC5000AFEEB /* GridsGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridsGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68171BE019ADDBC5000AFEEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		68171BE419ADDBC5000AFEEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		68171BE819ADDBC5000AFEEB /* GridsGallery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GridsGallery-Info.plist"; sourceTree = "<group>"; };
 		68171BEA19ADDBC5000AFEEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; };
 		68171BEE19ADDBC5000AFEEB /* GridsGallery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GridsGallery-Prefix.pch"; sourceTree = "<group>"; };
 		68171BEF19ADDBC5000AFEEB /* GridsGalleryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridsGalleryAppDelegate.h; sourceTree = "<group>"; };
-		68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GridsGalleryAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GridsGalleryAppDelegate.m; sourceTree = "<group>"; };
 		68171BF319ADDBC5000AFEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GridsGallery.storyboard; sourceTree = "<group>"; };
-		68171BF519ADDBC5000AFEEB /* GridsGalleryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GridsGalleryViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		68171BF619ADDBC5000AFEEB /* GridsGalleryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GridsGalleryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		68171BF819ADDBC5000AFEEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68171BFF19ADDBC5000AFEEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		68171C1519ADDC04000AFEEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -62,7 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E3A3AD19F7FA13001AD37B /* libShinobiPlayUtils.a in Frameworks */,
+				54004AA519F93B4000B4DF9D /* ShinobiGrids.framework in Frameworks */,
+				54E3A3BC19F81804001AD37B /* libShinobiPlayUtils.a in Frameworks */,
 				68171C1619ADDC04000AFEEB /* QuartzCore.framework in Frameworks */,
 				68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */,
 				68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */,
@@ -73,19 +102,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		54E3A3A519F7F854001AD37B /* Products */ = {
+		54004A9D19F9395800B4DF9D /* SortGrid */ = {
 			isa = PBXGroup;
 			children = (
-				54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */,
-				54E3A3AC19F7F854001AD37B /* ShinobiPlayUtilsTests.xctest */,
+				54004AA919F93BCB00B4DF9D /* GridsGallerySortGridViewController.h */,
+				54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */,
+			);
+			name = SortGrid;
+			sourceTree = "<group>";
+		};
+		54004AA019F9396500B4DF9D /* EditableGrid */ = {
+			isa = PBXGroup;
+			children = (
+				54004AA619F93BB300B4DF9D /* GridsGalleryEditableGridViewController.h */,
+				54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */,
+			);
+			name = EditableGrid;
+			sourceTree = "<group>";
+		};
+		548A2B0519FFDE1D005571D1 /* SectionGrid */ = {
+			isa = PBXGroup;
+			children = (
+				548A2B0619FFDE3E005571D1 /* GridsGallerySectionsGridViewController.h */,
+				548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */,
+			);
+			name = SectionGrid;
+			sourceTree = "<group>";
+		};
+		548A2B0919FFF096005571D1 /* CustomCellGrid */ = {
+			isa = PBXGroup;
+			children = (
+				548A2B0A19FFF0A6005571D1 /* CustomCells */,
+				548A2B0B19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.h */,
+				548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */,
+			);
+			name = CustomCellGrid;
+			sourceTree = "<group>";
+		};
+		548A2B0A19FFF0A6005571D1 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				548A2B0F19FFF276005571D1 /* GridsGalleryRatingCell.h */,
+				548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */,
+				548A2B1219FFF284005571D1 /* GridsGalleryCertificationCell.h */,
+				548A2B1319FFF284005571D1 /* GridsGalleryCertificationCell.m */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		54E3A3B419F817E9001AD37B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */,
+				54E3A3BB19F817E9001AD37B /* ShinobiPlayUtilsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */ = {
+			isa = PBXGroup;
+			children = (
+				54E4AB7E19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.h */,
+				54E4AB7D19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m */,
+			);
+			name = ReorderGrid;
+			sourceTree = "<group>";
+		};
+		54E4AB8219FE9E3400ABE4B1 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				54DB79E119FA4D7100FC2DF9 /* GridsGallery-data.plist */,
+			);
+			name = DataSources;
 			sourceTree = "<group>";
 		};
 		68171BD419ADDBC5000AFEEB = {
 			isa = PBXGroup;
 			children = (
-				54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */,
+				54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */,
 				68171BE619ADDBC5000AFEEB /* GridsGallery */,
 				68171BDF19ADDBC5000AFEEB /* Frameworks */,
 				68171BDE19ADDBC5000AFEEB /* Products */,
@@ -103,6 +197,7 @@
 		68171BDF19ADDBC5000AFEEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54004AA419F93B4000B4DF9D /* ShinobiGrids.framework */,
 				68171C1519ADDC04000AFEEB /* QuartzCore.framework */,
 				68171BE019ADDBC5000AFEEB /* Foundation.framework */,
 				68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */,
@@ -115,13 +210,21 @@
 		68171BE619ADDBC5000AFEEB /* GridsGallery */ = {
 			isa = PBXGroup;
 			children = (
+				54004A9D19F9395800B4DF9D /* SortGrid */,
+				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
+				54004AA019F9396500B4DF9D /* EditableGrid */,
+				548A2B0919FFF096005571D1 /* CustomCellGrid */,
+				548A2B0519FFDE1D005571D1 /* SectionGrid */,
+				54E4AB8219FE9E3400ABE4B1 /* DataSources */,
 				68171BEF19ADDBC5000AFEEB /* GridsGalleryAppDelegate.h */,
 				68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */,
 				68171BF219ADDBC5000AFEEB /* GridsGallery.storyboard */,
-				68171BF519ADDBC5000AFEEB /* GridsGalleryViewController.h */,
-				68171BF619ADDBC5000AFEEB /* GridsGalleryViewController.m */,
+				54004AA119F93A6B00B4DF9D /* GridsGalleryCommonViewController.h */,
+				54004AA219F93A6B00B4DF9D /* GridsGalleryCommonViewController.m */,
 				68171BF819ADDBC5000AFEEB /* Images.xcassets */,
 				68171BE719ADDBC5000AFEEB /* Supporting Files */,
+				54D700DF1A090D68005FE178 /* UIColor+GridsGalleryColor.h */,
+				54D700E01A090D68005FE178 /* UIColor+GridsGalleryColor.m */,
 			);
 			path = GridsGallery;
 			sourceTree = "<group>";
@@ -180,8 +283,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 54E3A3A519F7F854001AD37B /* Products */;
-					ProjectRef = 54E3A3A419F7F854001AD37B /* ShinobiPlayUtils.xcodeproj */;
+					ProductGroup = 54E3A3B419F817E9001AD37B /* Products */;
+					ProjectRef = 54E3A3B319F817E9001AD37B /* ShinobiPlayUtils.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -192,18 +295,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		54E3A3AA19F7F854001AD37B /* libShinobiPlayUtils.a */ = {
+		54E3A3B919F817E9001AD37B /* libShinobiPlayUtils.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libShinobiPlayUtils.a;
-			remoteRef = 54E3A3A919F7F854001AD37B /* PBXContainerItemProxy */;
+			remoteRef = 54E3A3B819F817E9001AD37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		54E3A3AC19F7F854001AD37B /* ShinobiPlayUtilsTests.xctest */ = {
+		54E3A3BB19F817E9001AD37B /* ShinobiPlayUtilsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ShinobiPlayUtilsTests.xctest;
-			remoteRef = 54E3A3AB19F7F854001AD37B /* PBXContainerItemProxy */;
+			remoteRef = 54E3A3BA19F817E9001AD37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -215,6 +318,7 @@
 			files = (
 				68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */,
 				68171BEB19ADDBC5000AFEEB /* InfoPlist.strings in Resources */,
+				54DB79E219FA4D7100FC2DF9 /* GridsGallery-data.plist in Resources */,
 				68171BF419ADDBC5000AFEEB /* GridsGallery.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,9 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D700E11A090D68005FE178 /* UIColor+GridsGalleryColor.m in Sources */,
 				68171BF119ADDBC5000AFEEB /* GridsGalleryAppDelegate.m in Sources */,
+				54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */,
 				68171BED19ADDBC5000AFEEB /* main.m in Sources */,
-				68171BF719ADDBC5000AFEEB /* GridsGalleryViewController.m in Sources */,
+				548A2B1119FFF276005571D1 /* GridsGalleryRatingCell.m in Sources */,
+				548A2B0819FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m in Sources */,
+				54004AA319F93A6B00B4DF9D /* GridsGalleryCommonViewController.m in Sources */,
+				54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */,
+				548A2B0D19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m in Sources */,
+				54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */,
+				548A2B1419FFF284005571D1 /* GridsGalleryCertificationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridsGallery/GridsGallery-Prefix.pch";
 				INFOPLIST_FILE = "GridsGallery/GridsGallery-Info.plist";
@@ -344,6 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridsGallery/GridsGallery-Prefix.pch";
 				INFOPLIST_FILE = "GridsGallery/GridsGallery-Info.plist";
@@ -371,6 +491,7 @@
 				68171C1119ADDBC5000AFEEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

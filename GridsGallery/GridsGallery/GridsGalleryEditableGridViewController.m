@@ -1,8 +1,8 @@
 //
-//  GridsGalleryViewController.h
+//  GridsGalleryEditableGridViewController.m
 //  GridsGallery
 //
-//  Created by Alison Clarke on 27/08/2014.
+//  Created by Daniel Allsop on 23/10/2014.
 //
 //  Copyright 2014 Scott Logic
 //
@@ -19,9 +19,15 @@
 //  limitations under the License.
 //
 
-@import UIKit;
-#import "ShinobiPlayUtils/SPUGalleryManagedViewController.h"
+#import "GridsGalleryEditableGridViewController.h"
 
-@interface GridsGalleryViewController : SPUGalleryManagedViewController
+@implementation GridsGalleryEditableGridViewController
+
+- (void)setupGrid {
+  // Enable editing on all columns
+  for (SDataGridColumn *column in self.grid.columns) {
+    column.editable = YES;
+  }
+}
 
 @end

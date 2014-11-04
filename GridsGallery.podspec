@@ -7,14 +7,14 @@
 Pod::Spec.new do |s|
   s.name             = "GridsGallery"
   s.version          = '0.1.0'
-  s.summary          = “A gallery of ShinobiGrids"
+  s.summary          = "A gallery of ShinobiGrids"
   s.description      = <<-DESC
                        An app demonstrating the out of the box functionality supported by ShinobiGrids
                        DESC
   s.homepage         = "http://www.shinobicontrols.com"
   s.license          = 'Apache License, Version 2.0'
-  s.author           = { “Daniel Allsop => “dallsop@shinobicontrols.com" }
-  s.source           = { :git => "git@bitbucket.org:shinobicontrols/play-grids-gallery.git", 
+  s.author           = { "Daniel Allsop" => "dallsop@shinobicontrols.com" }
+  s.source           = { :git => "https://bitbucket.org/shinobicontrols/play-grids-gallery.git", 
                          :tag => s.version.to_s,
                          :submodules => true 
                        }
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'GridsGallery/GridsGallery/**/*.{h,m}'
   s.dependency 'ShinobiPlayUtils'
-  s.resources = ['GridsGallery/**/*.storyboard', 'GridsGallery/**/*.xib', 'GridsGallery/**/*.xcassets']
+  s.resources = ['GridsGallery/**/GridsGallery*data.plist', 'GridsGallery/**/*.storyboard', 'GridsGallery/**/*.xib', 'GridsGallery/**/*.xcassets']
   s.frameworks = 'QuartzCore', 'ShinobiGrids'
   s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(DEVELOPER_FRAMEWORKS_DIR)" "$(PROJECT_DIR)/../"' }
 end
