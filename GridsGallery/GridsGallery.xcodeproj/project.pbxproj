@@ -72,10 +72,10 @@
 		68171BE419ADDBC5000AFEEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		68171BE819ADDBC5000AFEEB /* GridsGallery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GridsGallery-Info.plist"; sourceTree = "<group>"; };
 		68171BEA19ADDBC5000AFEEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; };
 		68171BEE19ADDBC5000AFEEB /* GridsGallery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GridsGallery-Prefix.pch"; sourceTree = "<group>"; };
 		68171BEF19ADDBC5000AFEEB /* GridsGalleryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridsGalleryAppDelegate.h; sourceTree = "<group>"; };
-		68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GridsGalleryAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GridsGalleryAppDelegate.m; sourceTree = "<group>"; };
 		68171BF319ADDBC5000AFEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GridsGallery.storyboard; sourceTree = "<group>"; };
 		68171BF819ADDBC5000AFEEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68171BFF19ADDBC5000AFEEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
