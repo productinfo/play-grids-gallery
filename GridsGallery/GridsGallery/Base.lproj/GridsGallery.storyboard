@@ -8,13 +8,13 @@
         <!--Sort-->
         <scene sceneID="3kb-RU-e0C">
             <objects>
-                <viewController storyboardIdentifier="GridsGallerySortableGridViewController" id="chu-Ad-GEj" userLabel="Sort" customClass="GridsGallerySortGridViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GridsGallerySortGridViewController" id="chu-Ad-GEj" userLabel="Sort" customClass="GridsGallerySortGridViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0O-iN-The">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="S7O-oc-NCx" customClass="ShinobiDataGrid">
-                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <rect key="frame" x="65" y="65" width="895" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIS-Cw-lH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="1256"/>
+            <point key="canvasLocation" x="205" y="96"/>
         </scene>
         <!--Editable-->
         <scene sceneID="yIe-Uc-5N1">
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="jIn-Ei-ibE" customClass="ShinobiDataGrid">
-                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <rect key="frame" x="65" y="65" width="895" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVd-Em-ZMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="-644"/>
+            <point key="canvasLocation" x="205" y="-820"/>
         </scene>
         <!--Sections-->
         <scene sceneID="Q77-cL-3jz">
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="oBq-Qu-1KR" customClass="ShinobiDataGrid">
-                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <rect key="frame" x="65" y="65" width="895" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qar-cX-OiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-681" y="1384"/>
+            <point key="canvasLocation" x="1357" y="308"/>
         </scene>
         <!--CustomCell-->
         <scene sceneID="4cE-uH-BNg">
@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="1ex-Fx-5eT" customClass="ShinobiDataGrid">
-                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <rect key="frame" x="65" y="65" width="895" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -107,13 +107,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCg-8P-i9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-781" y="2583"/>
+            <point key="canvasLocation" x="205" y="983"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NOl-W9-Prz">
             <objects>
                 <tabBarController id="mGB-b9-NBg" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9fu-b7-Pwp">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -129,7 +130,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ja-uI-AdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-707" y="-101"/>
+            <point key="canvasLocation" x="-921" y="-177"/>
         </scene>
         <!--Reorder-->
         <scene sceneID="oeU-mB-fc8">
@@ -140,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="aEh-fS-3m3" customClass="ShinobiDataGrid">
-                                <rect key="frame" x="50" y="80" width="924" height="608"/>
+                                <rect key="frame" x="65" y="65" width="895" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -155,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeF-T8-neF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="208"/>
+            <point key="canvasLocation" x="1357" y="-572"/>
         </scene>
     </scenes>
     <resources>
