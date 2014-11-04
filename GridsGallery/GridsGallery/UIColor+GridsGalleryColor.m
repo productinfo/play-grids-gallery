@@ -23,23 +23,23 @@
 
 @implementation UIColor (GridsGalleryColor)
 
-+ (UIColor*)gCertificateRatingColor {
++ (UIColor*)certificateRatingGreenColor {
   return [UIColor colorWithRed:1.0f/255 green:106.0f/255 blue:49.0f/255 alpha:1];
 }
 
-+ (UIColor*)pgCertificateRatingColor {
++ (UIColor*)certificateRatingOrangeColor {
   return [UIColor colorWithRed:242.0f/255 green:90.0f/255 blue:56.0f/255 alpha:1];
 }
 
-+ (UIColor*)pg13CertificateRatingColor {
++ (UIColor*)certificateRatingPurpleColor {
   return [UIColor colorWithRed:118.0f/255 green:64.0f/255 blue:146.0f/255 alpha:1];
 }
 
-+ (UIColor*)startRatingColor {
++ (UIColor*)starRatingGoldColor {
   return [UIColor colorWithRed:255.0f/255 green:175.0f/255 blue:4.0f/255 alpha:1];
 }
 
-+ (UIColor*)emptyStartRatingColor {
++ (UIColor*)starRatingGrayColor {
   return [UIColor colorWithRed:202.0f/255 green:204.0f/255 blue:204.0f/255 alpha:1];
 }
 

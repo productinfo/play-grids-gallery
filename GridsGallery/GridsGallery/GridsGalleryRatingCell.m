@@ -38,10 +38,10 @@ const CGFloat insetY = 10;
 -(id)initWithReuseIdentifier:(NSString *)identifier {
   if (self = [super initWithReuseIdentifier:identifier]) {
     self.starRating = [self initializeRatingView:self.starRating
-                             withBackgroundColor:[UIColor startRatingColor]];
+                             withBackgroundColor:[UIColor starRatingGoldColor]];
     
     self.emptyRating = [self initializeRatingView:self.emptyRating
-                             withBackgroundColor:[UIColor emptyStartRatingColor]];
+                             withBackgroundColor:[UIColor starRatingGrayColor]];
     
     self.starImage = [UIImage imageNamed:@"star_hollow.png"];
     for (int i = 0; i < 5; i++) {

@@ -21,10 +21,10 @@
 
 @interface UIColor (GridsGalleryColor)
 
-+ (UIColor*)gCertificateRatingColor;
-+ (UIColor*)pgCertificateRatingColor;
-+ (UIColor*)pg13CertificateRatingColor;
-+ (UIColor*)startRatingColor;
-+ (UIColor*)emptyStartRatingColor;
++ (UIColor*)certificateRatingGreenColor;
++ (UIColor*)certificateRatingOrangeColor;
++ (UIColor*)certificateRatingPurpleColor;
++ (UIColor*)starRatingGoldColor;
++ (UIColor*)starRatingGrayColor;
 
 @end

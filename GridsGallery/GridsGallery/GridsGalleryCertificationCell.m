@@ -51,14 +51,14 @@
   self.certificateRating.text = certification;
   
   if ([certification isEqualToString:@"G"]) {
-    self.certificateRating.textColor = [UIColor gCertificateRatingColor];
+    self.certificateRating.textColor = [UIColor certificateRatingGreenColor];
     self.certificateDescription.text = @"GENERAL\nAUDIENCES";
   } else if ([certification isEqualToString:@"PG"]) {
-    self.certificateRating.textColor = [UIColor pgCertificateRatingColor];
+    self.certificateRating.textColor = [UIColor certificateRatingOrangeColor];
     self.certificateDescription.text = @"PARENTAL\nGUIDANCE\nSUGGESTED";
     
   } else if ([certification isEqualToString:@"PG-13"]) {
-    self.certificateRating.textColor = [UIColor pg13CertificateRatingColor];
+    self.certificateRating.textColor = [UIColor certificateRatingPurpleColor];
     self.certificateDescription.text = @"PARENTS\nSTRONGLY\nCAUTIONED";
   }
   
