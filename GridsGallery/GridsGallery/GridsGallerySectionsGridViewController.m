@@ -26,6 +26,8 @@
 - (void)setupGrid {
   // Group the data by genre
   self.dataSource.groupedPropertyKey = @"genre";
+  
+  [super setupGrid];
 }
 
 @end

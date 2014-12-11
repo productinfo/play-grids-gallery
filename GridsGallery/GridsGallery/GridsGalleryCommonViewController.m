@@ -44,18 +44,29 @@
 - (void)setupGrid {
   // Add an implementation in subclasses for any grid setup code that should be called
   // when a grid is recreated
+  
+  UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
+  SDataGridColumn *dataGridColumn = self.grid.columns[0];
+  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:16 forDataGridCellStyle:self.grid.defaultCellStyleForHeaderRow];
+  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForRows];
+  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForAlternateRows];
+}
+
+- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets fontNameUsingColumn:(SDataGridColumn*)dataGridColumn andFontSize:(int)fontSize forDataGridCellStyle:(SDataGridCellStyle*)dataGridCellStyle{
+  dataGridCellStyle.font = [UIFont fontWithName:dataGridColumn.headerCellStyle.font.fontName size:fontSize];
+  dataGridCellStyle.contentInset = edgeInsets;
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:330
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:100
              textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:89
              textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:115
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:192
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:190
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
 }
 

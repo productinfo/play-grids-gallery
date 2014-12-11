@@ -34,6 +34,8 @@
   // Set the third column's sort mode to tri state
   SDataGridColumn *thirdColumn = columns[2];
   thirdColumn.sortMode = SDataGridColumnSortModeTriState;
+  
+  [super setupGrid];
 }
 
 @end
