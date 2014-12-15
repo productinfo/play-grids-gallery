@@ -36,10 +36,9 @@
   [self setupGrid];
   
   UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-  SDataGridColumn *dataGridColumn = self.grid.columns[0];
-  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:16 forDataGridCellStyle:self.grid.defaultCellStyleForHeaderRow];
-  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForRows];
-  [self setEdgeInsets:edgeInsets fontNameUsingColumn:dataGridColumn andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForAlternateRows];
+  [self setEdgeInsets:edgeInsets andFontSize:16 forDataGridCellStyle:self.grid.defaultCellStyleForHeaderRow];
+  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForRows];
+  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForAlternateRows];
   
   // Update the datasource
   self.dataSource.data = self.data;
@@ -52,8 +51,8 @@
   // when a grid is recreated
 }
 
-- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets fontNameUsingColumn:(SDataGridColumn*)dataGridColumn andFontSize:(int)fontSize forDataGridCellStyle:(SDataGridCellStyle*)dataGridCellStyle{
-  dataGridCellStyle.font = [UIFont fontWithName:dataGridColumn.headerCellStyle.font.fontName size:fontSize];
+- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets andFontSize:(int)fontSize forDataGridCellStyle:(SDataGridCellStyle*)dataGridCellStyle{
+  dataGridCellStyle.font = [dataGridCellStyle.font fontWithSize:fontSize];
   dataGridCellStyle.contentInset = edgeInsets;
 }
 
