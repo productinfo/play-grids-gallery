@@ -35,6 +35,11 @@
   
   [self setupGrid];
   
+  UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
+  [self setEdgeInsets:edgeInsets andFontSize:16 forDataGridCellStyle:self.grid.defaultCellStyleForHeaderRow];
+  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForRows];
+  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForAlternateRows];
+  
   // Update the datasource
   self.dataSource.data = self.data;
 }
@@ -46,16 +51,21 @@
   // when a grid is recreated
 }
 
+- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets andFontSize:(int)fontSize forDataGridCellStyle:(SDataGridCellStyle*)dataGridCellStyle{
+  dataGridCellStyle.font = [dataGridCellStyle.font fontWithSize:fontSize];
+  dataGridCellStyle.contentInset = edgeInsets;
+}
+
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:350
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:330
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:120
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:100
              textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:103
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:89
              textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:115
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:192
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:190
              textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
 }
 

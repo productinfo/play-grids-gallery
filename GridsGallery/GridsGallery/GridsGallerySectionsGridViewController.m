@@ -28,4 +28,19 @@
   self.dataSource.groupedPropertyKey = @"genre";
 }
 
+#pragma mark - Datasource helper delegate methods
+
+- (UIView*)shinobiDataGrid:(ShinobiDataGrid *)grid viewForHeaderInSection:(NSInteger)section inFrame:(CGRect)frame{
+  UIView *view = [[UIView alloc] initWithFrame:frame];
+  view.backgroundColor = grid.defaultSectionHeaderStyle.backgroundColor;
+  
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectInset(frame, 10, 0)];
+  label.text = [grid.dataSource shinobiDataGrid:grid titleForHeaderInSection:section];
+  label.backgroundColor = [UIColor clearColor];
+  label.font = [UIFont fontWithName:grid.defaultSectionHeaderStyle.font.fontName size:14];
+  [view addSubview:label];
+  
+  return view;
+}
+
 @end
