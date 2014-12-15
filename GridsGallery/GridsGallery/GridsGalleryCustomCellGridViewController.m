@@ -26,7 +26,7 @@
 @implementation GridsGalleryCustomCellGridViewController
 
 - (void)setupGrid {
-  [super setupGrid];
+
 }
 
 - (void)addColumns {

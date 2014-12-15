@@ -26,8 +26,6 @@
 - (void)setupGrid {
   // Group the data by genre
   self.dataSource.groupedPropertyKey = @"genre";
-  
-  [super setupGrid];
 }
 
 #pragma mark - Datasource helper delegate methods

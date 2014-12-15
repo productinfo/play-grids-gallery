@@ -28,8 +28,6 @@
   for (SDataGridColumn *column in self.grid.columns) {
     column.editable = YES;
   }
-  
-  [super setupGrid];
 }
 
 @end
