@@ -37,7 +37,6 @@
                propertyKey:(NSString*)propertyKey
                      width:(float)width
              textAlignment:(NSTextAlignment)textAlignment
-            titleAlignment:(NSTextAlignment)textAlignment
                   cellType:(Class)cellType;
 
 @end

@@ -57,16 +57,16 @@
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:330
-             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:100
-             textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:89
-             textAlignment:NSTextAlignmentCenter titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:115
-             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:190
-             textAlignment:NSTextAlignmentLeft titleAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:340
+             textAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:115
+             textAlignment:NSTextAlignmentCenter cellType:nil];
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:115
+             textAlignment:NSTextAlignmentCenter cellType:nil];
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130
+             textAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:208
+             textAlignment:NSTextAlignmentLeft cellType:nil];
 }
 
 - (void)getData {
@@ -108,12 +108,12 @@
 
 - (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey
                      width:(float)width textAlignment:(NSTextAlignment)textAlignment
-            titleAlignment:(NSTextAlignment)titleAlignment cellType:(Class)cellType{
+                  cellType:(Class)cellType{
   SDataGridColumn *column = [[SDataGridColumn alloc] initWithTitle:title];
   column.propertyKey = propertyKey;
   column.width = @(width);
   column.cellStyle.textAlignment = textAlignment;
-  column.headerCellStyle.textAlignment = titleAlignment;
+  column.headerCellStyle.textAlignment = textAlignment;
   if (cellType) {
     column.cellType = cellType;
   }
