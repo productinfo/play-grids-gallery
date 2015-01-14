@@ -50,7 +50,7 @@
   // when a grid is recreated
 }
 
-- (void)styleGrid{
+- (void)styleGrid {
   // Get the theme to set the basic fonts and colours
   
   SDataGridTheme *theme = [SDataGridiOS7Theme new];
@@ -76,8 +76,6 @@
   gridLineStyle.width = 0.5;
   gridLineStyle.color = [UIColor lightGrayColor];
   theme.gridLineStyle = gridLineStyle;
-
-//  theme.tintColor = ;
   
   SDataGridSectionHeaderStyle *dataGridSectionHeaderStyle = [SDataGridSectionHeaderStyle new];
   dataGridSectionHeaderStyle.backgroundColor = [[UIColor shinobiPlayBlueColor] shinobiBackgroundColor];
@@ -88,7 +86,9 @@
   [self.grid applyTheme:theme];
 }
 
-- (SDataGridCellStyle*)createDataGridCellStyleWithFont:(UIFont*)font textColor:(UIColor*)textColor backgroundColour:(UIColor*)backgroundColor{
+- (SDataGridCellStyle*)createDataGridCellStyleWithFont:(UIFont*)font
+                                             textColor:(UIColor*)textColor
+                                      backgroundColour:(UIColor*)backgroundColor {
   SDataGridCellStyle *dataGridCellStyle = [SDataGridCellStyle new];
   dataGridCellStyle.textVerticalAlignment = UIControlContentVerticalAlignmentCenter;
   dataGridCellStyle.font = font;

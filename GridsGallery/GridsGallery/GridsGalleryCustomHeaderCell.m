@@ -29,11 +29,11 @@
 
 @implementation GridsGalleryCustomHeaderCell
 
-- (void)showArrowForSortOrder:(SDataGridColumnSortOrder)sortOrder sortMode:(SDataGridColumnSortMode)sortMode{
+- (void)showArrowForSortOrder:(SDataGridColumnSortOrder)sortOrder sortMode:(SDataGridColumnSortMode)sortMode {
  // Remove old arrow.
  [self.arrowView removeFromSuperview];
   
-  if((sortMode == SDataGridColumnSortModeBiState) ||  (sortMode == SDataGridColumnSortModeTriState)){
+  if ((sortMode == SDataGridColumnSortModeBiState) || (sortMode == SDataGridColumnSortModeTriState)) {
     UIImage *arrow;
     if (sortOrder == SDataGridColumnSortOrderAscending) {
       arrow = [UIImage imageNamed:@"SortUp"];
@@ -44,9 +44,13 @@
     }
     self.arrowView = [[UIImageView alloc] initWithImage:arrow];
     
+    // Repositon the sort arrow so that it sits to the left of the text in the header
+    CGFloat sortArrowPadding = 10;
+    CGFloat sortArrowSize = 21;
+    CGFloat sizeOfText =  [self.textField sizeThatFits:self.textField.frame.size].width;
     // Position and add arrow.
     [self addSubview:self.arrowView];
-    self.arrowView.frame = CGRectMake(self.frame.size.width - ((self.textField.text.length == 4) ? 40 : 55) - 21 - 10, 11, 21, 21);
+    self.arrowView.frame = CGRectMake(self.frame.size.width - sizeOfText - sortArrowSize - sortArrowPadding, sortArrowSize / 2, sortArrowSize, sortArrowSize);
   }
 }
 
