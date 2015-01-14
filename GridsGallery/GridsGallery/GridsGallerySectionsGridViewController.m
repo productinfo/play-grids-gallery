@@ -37,6 +37,7 @@
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectInset(frame, 10, 0)];
   label.text = [grid.dataSource shinobiDataGrid:grid titleForHeaderInSection:section];
   label.backgroundColor = [UIColor clearColor];
+  label.textColor = grid.defaultSectionHeaderStyle.textColor;
   label.font = [UIFont fontWithName:grid.defaultSectionHeaderStyle.font.fontName size:14];
   [view addSubview:label];
   

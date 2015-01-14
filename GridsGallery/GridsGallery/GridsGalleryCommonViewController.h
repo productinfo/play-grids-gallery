@@ -33,11 +33,8 @@
 
 #pragma mark - Utility methods
 - (NSString*)getGrossStringForValue:(int)value;
-- (void)addColumnWithTitle:(NSString*)title
-               propertyKey:(NSString*)propertyKey
-                     width:(float)width
-             textAlignment:(NSTextAlignment)textAlignment
-            titleAlignment:(NSTextAlignment)textAlignment
-                  cellType:(Class)cellType;
+- (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey
+                     width:(float)width textAlignment:(NSTextAlignment)textAlignment
+                  cellType:(Class)cellType edgeInsets:(UIEdgeInsets)edgeInsets;
 
 @end

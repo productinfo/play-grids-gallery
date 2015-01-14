@@ -11,6 +11,7 @@
 		54004AA519F93B4000B4DF9D /* ShinobiGrids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54004AA419F93B4000B4DF9D /* ShinobiGrids.framework */; };
 		54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */; };
 		54004AAB19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */; };
+		543118741A653F3200E45874 /* GridsGalleryCustomHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543118731A653F3200E45874 /* GridsGalleryCustomHeaderCell.m */; };
 		548A2B0819FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */; };
 		548A2B0D19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B0C19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m */; };
 		548A2B1119FFF276005571D1 /* GridsGalleryRatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A2B1019FFF276005571D1 /* GridsGalleryRatingCell.m */; };
@@ -55,6 +56,8 @@
 		54004AA719F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryEditableGridViewController.m; sourceTree = "<group>"; };
 		54004AA919F93BCB00B4DF9D /* GridsGallerySortGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySortGridViewController.h; sourceTree = "<group>"; };
 		54004AAA19F93BCB00B4DF9D /* GridsGallerySortGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySortGridViewController.m; sourceTree = "<group>"; };
+		543118721A653F3200E45874 /* GridsGalleryCustomHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCustomHeaderCell.h; sourceTree = "<group>"; };
+		543118731A653F3200E45874 /* GridsGalleryCustomHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGalleryCustomHeaderCell.m; sourceTree = "<group>"; };
 		548A2B0619FFDE3E005571D1 /* GridsGallerySectionsGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGallerySectionsGridViewController.h; sourceTree = "<group>"; };
 		548A2B0719FFDE3E005571D1 /* GridsGallerySectionsGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridsGallerySectionsGridViewController.m; sourceTree = "<group>"; };
 		548A2B0B19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridsGalleryCustomCellGridViewController.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				68171BE719ADDBC5000AFEEB /* Supporting Files */,
 				54D700DF1A090D68005FE178 /* UIColor+GridsGalleryColor.h */,
 				54D700E01A090D68005FE178 /* UIColor+GridsGalleryColor.m */,
+				543118721A653F3200E45874 /* GridsGalleryCustomHeaderCell.h */,
+				543118731A653F3200E45874 /* GridsGalleryCustomHeaderCell.m */,
 			);
 			path = GridsGallery;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				54004AA819F93BB300B4DF9D /* GridsGalleryEditableGridViewController.m in Sources */,
 				548A2B0D19FFF0DB005571D1 /* GridsGalleryCustomCellGridViewController.m in Sources */,
 				54E4AB7F19FE88AA00ABE4B1 /* GridsGalleryReorderGridViewController.m in Sources */,
+				543118741A653F3200E45874 /* GridsGalleryCustomHeaderCell.m in Sources */,
 				548A2B1419FFF284005571D1 /* GridsGalleryCertificationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridsGallery/GridsGallery-Prefix.pch";
 				INFOPLIST_FILE = "GridsGallery/GridsGallery-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = GridsGallery;
 				WRAPPER_EXTENSION = app;
 			};
@@ -467,6 +474,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GridsGallery/GridsGallery-Prefix.pch";
 				INFOPLIST_FILE = "GridsGallery/GridsGallery-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = GridsGallery;
 				WRAPPER_EXTENSION = app;
 			};
