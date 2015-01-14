@@ -21,6 +21,8 @@
 
 #import "GridsGalleryCertificationCell.h"
 #import "UIColor+GridsGalleryColor.h"
+#import "ShinobiPlayUtils/UIFont+SPUFont.h"
+#import "ShinobiPlayUtils/UIColor+SPUColor.h"
 
 @interface GridsGalleryCertificationCell ()
 
@@ -38,7 +40,8 @@
     [self addSubview:self.certificateRating];
     
     self.certificateDescription = [UILabel new];
-    self.certificateDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+    self.certificateDescription.font = [UIFont shinobiFontOfSize:12];
+    self.certificateDescription.textColor = [UIColor shinobiDarkGrayColor];
     self.certificateDescription.textAlignment = NSTextAlignmentCenter;
     self.certificateDescription.lineBreakMode = NSLineBreakByWordWrapping;
     self.certificateDescription.numberOfLines = 3;

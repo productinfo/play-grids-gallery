@@ -20,6 +20,9 @@
 //
 
 #import "GridsGalleryCommonViewController.h"
+#import "ShinobiPlayUtils/UIFont+SPUFont.h"
+#import "ShinobiPlayUtils/UIColor+SPUColor.h"
+#import "GridsGalleryCustomHeaderCell.h"
 
 @implementation GridsGalleryCommonViewController
 
@@ -34,11 +37,7 @@
   self.dataSource.delegate = self;
   
   [self setupGrid];
-  
-  UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-  [self setEdgeInsets:edgeInsets andFontSize:16 forDataGridCellStyle:self.grid.defaultCellStyleForHeaderRow];
-  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForRows];
-  [self setEdgeInsets:edgeInsets andFontSize:14 forDataGridCellStyle:self.grid.defaultCellStyleForAlternateRows];
+  [self styleGrid];
   
   // Update the datasource
   self.dataSource.data = self.data;
@@ -51,22 +50,64 @@
   // when a grid is recreated
 }
 
-- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets andFontSize:(int)fontSize forDataGridCellStyle:(SDataGridCellStyle*)dataGridCellStyle{
-  dataGridCellStyle.font = [dataGridCellStyle.font fontWithSize:fontSize];
-  dataGridCellStyle.contentInset = edgeInsets;
+- (void)styleGrid{
+  // Get the theme to set the basic fonts and colours
+  
+  SDataGridTheme *theme = [SDataGridiOS7Theme new];
+  
+  SDataGridCellStyle *headerRowStyle = [self createDataGridCellStyleWithFont:[UIFont boldShinobiFontOfSize:20]
+                                                                   textColor:[UIColor whiteColor]
+                                                            backgroundColour:[[UIColor shinobiPlayBlueColor] shinobiLightColor]];
+  headerRowStyle.contentInset = UIEdgeInsetsMake(0, 10, 0, 10);
+  theme.headerRowStyle = headerRowStyle;
+  
+  SDataGridCellStyle *selectedCellStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:14]
+                                                                      textColor:[UIColor whiteColor]
+                                                               backgroundColour:[UIColor shinobiPlayBlueColor]];
+  theme.selectedCellStyle = selectedCellStyle;
+  
+  SDataGridCellStyle *rowStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:14]
+                                                             textColor:[UIColor shinobiDarkGrayColor]
+                                                      backgroundColour:[UIColor whiteColor]];
+  theme.rowStyle = rowStyle;
+  theme.alternateRowStyle = rowStyle;
+
+  SDataGridLineStyle *gridLineStyle = [SDataGridLineStyle new];
+  gridLineStyle.width = 0.5;
+  gridLineStyle.color = [UIColor lightGrayColor];
+  theme.gridLineStyle = gridLineStyle;
+
+//  theme.tintColor = ;
+  
+  SDataGridSectionHeaderStyle *dataGridSectionHeaderStyle = [SDataGridSectionHeaderStyle new];
+  dataGridSectionHeaderStyle.backgroundColor = [[UIColor shinobiPlayBlueColor] shinobiBackgroundColor];
+  dataGridSectionHeaderStyle.font = [UIFont boldShinobiFontOfSize:14];
+  dataGridSectionHeaderStyle.textColor = [UIColor shinobiDarkGrayColor];
+  theme.sectionHeaderStyle = dataGridSectionHeaderStyle;
+  
+  [self.grid applyTheme:theme];
+}
+
+- (SDataGridCellStyle*)createDataGridCellStyleWithFont:(UIFont*)font textColor:(UIColor*)textColor backgroundColour:(UIColor*)backgroundColor{
+  SDataGridCellStyle *dataGridCellStyle = [SDataGridCellStyle new];
+  dataGridCellStyle.textVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+  dataGridCellStyle.font = font;
+  dataGridCellStyle.textColor = textColor;
+  dataGridCellStyle.backgroundColor = backgroundColor;
+  return dataGridCellStyle;
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:340
-             textAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:115
-             textAlignment:NSTextAlignmentCenter cellType:nil];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:115
-             textAlignment:NSTextAlignmentCenter cellType:nil];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:130
-             textAlignment:NSTextAlignmentLeft cellType:nil];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:208
-             textAlignment:NSTextAlignmentLeft cellType:nil];
+  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:285
+             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:151
+             textAlignment:NSTextAlignmentRight cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:151
+             textAlignment:NSTextAlignmentRight cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:151
+             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:151
+             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
 }
 
 - (void)getData {
@@ -108,12 +149,15 @@
 
 - (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey
                      width:(float)width textAlignment:(NSTextAlignment)textAlignment
-                  cellType:(Class)cellType{
+                  cellType:(Class)cellType edgeInsets:(UIEdgeInsets)edgeInsets{
   SDataGridColumn *column = [[SDataGridColumn alloc] initWithTitle:title];
   column.propertyKey = propertyKey;
   column.width = @(width);
   column.cellStyle.textAlignment = textAlignment;
+  column.cellStyle.contentInset = edgeInsets;
+  column.headerCellStyle.contentInset = edgeInsets;
   column.headerCellStyle.textAlignment = textAlignment;
+  column.headerCellType = [GridsGalleryCustomHeaderCell class];
   if (cellType) {
     column.cellType = cellType;
   }
