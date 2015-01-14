@@ -44,13 +44,15 @@
     }
     self.arrowView = [[UIImageView alloc] initWithImage:arrow];
     
-    // Repositon the sort arrow so that it sits to the left of the text in the header
+    // Reposition the sort arrow so that it sits to the left of the text in the header
     CGFloat sortArrowPadding = 10;
     CGFloat sortArrowSize = 21;
     CGFloat sizeOfText =  [self.textField sizeThatFits:self.textField.frame.size].width;
-    // Position and add arrow.
     [self addSubview:self.arrowView];
-    self.arrowView.frame = CGRectMake(self.frame.size.width - sizeOfText - sortArrowSize - sortArrowPadding, sortArrowSize / 2, sortArrowSize, sortArrowSize);
+    self.arrowView.frame = CGRectMake(self.frame.size.width - sizeOfText - sortArrowSize - sortArrowPadding,
+                                      sortArrowSize / 2,
+                                      sortArrowSize,
+                                      sortArrowSize);
   }
 }
 
