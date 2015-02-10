@@ -214,10 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				54004A9D19F9395800B4DF9D /* SortGrid */,
-				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
-				54004AA019F9396500B4DF9D /* EditableGrid */,
 				548A2B0919FFF096005571D1 /* CustomCellGrid */,
+				54E4AB8119FE9E2700ABE4B1 /* ReorderGrid */,
 				548A2B0519FFDE1D005571D1 /* SectionGrid */,
+				54004AA019F9396500B4DF9D /* EditableGrid */,
 				54E4AB8219FE9E3400ABE4B1 /* DataSources */,
 				68171BEF19ADDBC5000AFEEB /* GridsGalleryAppDelegate.h */,
 				68171BF019ADDBC5000AFEEB /* GridsGalleryAppDelegate.m */,

@@ -26,7 +26,7 @@
 @implementation GridsGalleryCustomCellGridViewController
 
 - (void)setupGrid {
-
+  self.grid.selectionMode = SGridSelectionModeNone;
 }
 
 - (void)addColumns {

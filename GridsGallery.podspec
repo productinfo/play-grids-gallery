@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "GridsGallery"
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = "A gallery of ShinobiGrids"
   s.description      = <<-DESC
                        An app demonstrating the out of the box functionality supported by ShinobiGrids
