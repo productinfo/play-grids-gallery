@@ -61,12 +61,12 @@
   headerRowStyle.contentInset = UIEdgeInsetsMake(0, 10, 0, 10);
   theme.headerRowStyle = headerRowStyle;
   
-  SDataGridCellStyle *selectedCellStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:14]
+  SDataGridCellStyle *selectedCellStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:13]
                                                                       textColor:[UIColor whiteColor]
                                                                backgroundColour:[UIColor shinobiPlayBlueColor]];
   theme.selectedCellStyle = selectedCellStyle;
   
-  SDataGridCellStyle *rowStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:14]
+  SDataGridCellStyle *rowStyle = [self createDataGridCellStyleWithFont:[UIFont shinobiFontOfSize:13]
                                                              textColor:[UIColor shinobiDarkGrayColor]
                                                       backgroundColour:[UIColor whiteColor]];
   theme.rowStyle = rowStyle;
