@@ -34,7 +34,7 @@
 
 - (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
   SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
-  // For columns that contain numbers, extract the numbers from the users inputed text,
+  // For columns that contain numbers, extract the numbers from the user input,
   // format the result where appropriate, and update the data in the grid.
   if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
     int value = [self getIntFromString:cell.textField.text];
@@ -50,6 +50,8 @@
 }
 
 - (int)getIntFromString:(NSString*)string {
+  // returns an int made of the digits in the sequence they appear in given string
+  // e.g. given '$123M' it returns '123'
   NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
                           [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
   return [[numberArray componentsJoinedByString:@""] intValue];

@@ -36,7 +36,7 @@
 		<key>gross</key>
 		<integer>1518</integer>
 		<key>year</key>
-		<real>2012</real>
+		<integer>2012</integer>
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
@@ -50,7 +50,7 @@
 		<key>gross</key>
 		<integer>1341</integer>
 		<key>year</key>
-		<real>2011</real>
+		<integer>2011</integer>
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
@@ -64,7 +64,7 @@
 		<key>gross</key>
 		<integer>1276</integer>
 		<key>year</key>
-		<real>2013</real>
+		<integer>2013</integer>
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
@@ -78,7 +78,7 @@
 		<key>gross</key>
 		<integer>1215</integer>
 		<key>year</key>
-		<real>2013</real>
+		<integer>2013</integer>
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
@@ -92,7 +92,7 @@
 		<key>gross</key>
 		<integer>1123</integer>
 		<key>year</key>
-		<real>2011</real>
+		<integer>2011</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -106,7 +106,7 @@
 		<key>gross</key>
 		<integer>1119</integer>
 		<key>year</key>
-		<real>2003</real>
+		<integer>2003</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -120,7 +120,7 @@
 		<key>gross</key>
 		<integer>1108</integer>
 		<key>year</key>
-		<real>2012</real>
+		<integer>2012</integer>
 		<key>genre</key>
 		<string>Mystery</string>
 		<key>rating</key>
@@ -134,7 +134,7 @@
 		<key>gross</key>
 		<integer>1087</integer>
 		<key>year</key>
-		<real>2014</real>
+		<integer>2014</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -148,7 +148,7 @@
 		<key>gross</key>
 		<integer>1084</integer>
 		<key>year</key>
-		<real>2012</real>
+		<integer>2012</integer>
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
@@ -162,7 +162,7 @@
 		<key>gross</key>
 		<integer>1066</integer>
 		<key>year</key>
-		<real>2006</real>
+		<integer>2006</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -176,7 +176,7 @@
 		<key>gross</key>
 		<integer>1063</integer>
 		<key>year</key>
-		<real>2010</real>
+		<integer>2010</integer>
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
@@ -190,7 +190,7 @@
 		<key>gross</key>
 		<integer>1045</integer>
 		<key>year</key>
-		<real>2011</real>
+		<integer>2011</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -204,7 +204,7 @@
 		<key>gross</key>
 		<integer>1029</integer>
 		<key>year</key>
-		<real>1993</real>
+		<integer>1993</integer>
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
