@@ -24,26 +24,120 @@
 #import "ShinobiPlayUtils/UIColor+SPUColor.h"
 #import "GridsGalleryCustomHeaderCell.h"
 
+@interface GridsGalleryCommonViewController ()
+
+@property CGRect gridFrame;
+@property CGPoint gridContentOffset;
+@property NSArray *selectedRows;
+@property NSMutableArray *sectionStatus;
+@property NSMutableDictionary *gridColumnSortOrder;
+@property NSMutableArray *gridColumnsOrder;
+
+@end
+
 @implementation GridsGalleryCommonViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.gridColumnSortOrder = [NSMutableDictionary new];
+  
   [self getData];
   [self addColumns];
-
-  // Create the datasource
-  self.dataSource = [[SDataGridDataSourceHelper alloc] initWithDataGrid:self.grid];
-  self.dataSource.delegate = self;
+  
+  [self createDataSource];
   
   [self setupGrid];
   [self styleGrid];
   
   // Update the datasource
   self.dataSource.data = self.data;
+  
+  self.gridFrame = self.grid.frame;
+}
+
+- (void)createDataSource {
+  // Create the datasource
+  self.dataSource = [[SDataGridDataSourceHelper alloc] initWithDataGrid:self.grid];
+  self.dataSource.delegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  // Recreate the grid if necessary and when the grid does not specifiy a
+  // groupedPropertyKey with which to partician the data in the grid into multiple sections.
+  // This is to avoid over complicating this simple implementation.
+  if ((!self.grid) && (self.dataSource.groupedPropertyKey == nil)) {
+    [self createGrid];
+    
+    // Persist column order
+    [self addColumns];
+    
+    // Persist grid data
+    [self createDataSource];
+    self.dataSource.data = self.data;
+    
+    [self setupGrid];
+    [self styleGrid];
+    
+    // Reload grid
+    [self.grid reload];
+    
+    // Set column sort orders
+    for (SDataGridColumn *gridColumn in self.grid.columns) {
+      SDataGridColumnSortOrder columnSortOrder = (SDataGridColumnSortOrder)[self.gridColumnSortOrder[gridColumn.propertyKey] intValue];
+      gridColumn.sortOrder = (columnSortOrder) ? columnSortOrder : SDataGridColumnSortOrderNone;
+    }
+    
+    // Restore selected rows
+    [self.grid setSelectedRows:self.selectedRows animated:NO];
+  }
+  
+  // Restore scroll position
+  self.grid.contentOffset = self.gridContentOffset;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  [super viewDidDisappear:animated];
+  
+  // Save the grids state prior to closing the demo when the grid does not specifiy a
+  // groupedPropertyKey with which to partician the data in the grid into multiple sections.
+  // This is to avoid over complicating this simple implementation.
+  if (self.dataSource.groupedPropertyKey == nil) {
+      
+    // Persist the data
+    self.data = [((SDataGridDataSourceHelper*)self.grid.dataSource).sortedData copy];
+
+    // Persist column order
+    self.gridColumnsOrder = [NSMutableArray new];
+    for (int i = 0; i < [self.grid.columns count]; ++i) {
+      [self.gridColumnsOrder addObject:((SDataGridColumn*)self.grid.columns[i]).propertyKey];
+    }
+    
+    // Persist selected rows
+    self.selectedRows = self.grid.selectedRows;
+    
+    // Throw away the grid
+    [self.grid removeFromSuperview];
+    self.grid = nil;
+    self.dataSource.delegate = self;
+    self.dataSource = nil;
+  }
 }
 
 #pragma mark - lifecycle methods that can be implemented in subclasses
+
+- (void)createGrid {
+  if (!self.grid) {
+    self.grid = [[ShinobiDataGrid alloc] initWithFrame:self.gridFrame];
+  }
+  
+  // Chart may have already been added by a storyboard
+  if (![self.grid isDescendantOfView:self.view]) {
+    [self.view addSubview:self.grid];
+  }
+}
 
 - (void)setupGrid {
   // Add an implementation in subclasses for any grid setup code that should be called
@@ -98,24 +192,62 @@
 }
 
 - (void)addColumns {
-  [self addColumnWithTitle:@"Film Title" propertyKey:@"title" width:285
-             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
-  [self addColumnWithTitle:@"Gross" propertyKey:@"gross" width:151
-             textAlignment:NSTextAlignmentRight cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
-  [self addColumnWithTitle:@"Year" propertyKey:@"year" width:151
-             textAlignment:NSTextAlignmentRight cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
-  [self addColumnWithTitle:@"Genre" propertyKey:@"genre" width:151
-             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
-  [self addColumnWithTitle:@"Certification" propertyKey:@"certification" width:151
-             textAlignment:NSTextAlignmentLeft cellType:nil edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+  if (!self.gridColumnsOrder) {
+    self.gridColumnsOrder = [NSMutableArray arrayWithObjects:@"title", @"gross", @"year", @"genre", @"certification", nil];
+  }
+  
+  for (int i = 0; i < self.gridColumnsOrder.count; ++i) {
+    NSString *columnPropertyKey = self.gridColumnsOrder[i];
+    if ([columnPropertyKey isEqualToString:@"title"]) {
+      [self addColumnWithTitle:@"Film Title"
+                   propertyKey:@"title"
+                         width:285
+                 textAlignment:NSTextAlignmentLeft
+                      cellType:nil
+                    edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+    } else if (([columnPropertyKey isEqualToString:@"gross"]) || ([columnPropertyKey isEqualToString:@"year"])) {
+      [self addColumnWithTitle:[columnPropertyKey capitalizedString]
+                   propertyKey:columnPropertyKey
+                         width:150
+                 textAlignment:NSTextAlignmentRight
+                      cellType:nil
+                    edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+    } else {
+      [self addColumnWithTitle:[columnPropertyKey capitalizedString]
+                   propertyKey:columnPropertyKey
+                         width:150
+                 textAlignment:NSTextAlignmentLeft
+                      cellType:nil
+                    edgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+    }
+  }
 }
 
 - (void)getData {
   NSString *path = [[NSBundle mainBundle] pathForResource:@"GridsGallery-data" ofType:@"plist"];
   
   if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-    self.data = [[NSArray alloc] initWithContentsOfFile:path];
+    self.data = [[NSMutableArray alloc] initWithContentsOfFile:path];
   }
+}
+
+#pragma mark - SDataGridDelegate methods
+
+- (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
+  SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
+  if ([coordinate.column.propertyKey isEqualToString:@"Gross"]) {
+    cell.textField.text = [self formatGrossString:cell.textField.text];
+  }
+  self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
+  [self.grid reload];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+  self.gridContentOffset = scrollView.contentOffset;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+  self.gridContentOffset = scrollView.contentOffset;
 }
 
 #pragma mark - Datasource helper methods
@@ -123,16 +255,23 @@
 - (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper
        displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
   if ([propertyKey isEqualToString:@"gross"]) {
-    // We use this method to convert the gross int value into a string
-    int gross = [object[propertyKey] intValue];
-    return [self getGrossStringForValue:gross];
+    return [self formatGrossString:(NSString*)object[propertyKey]];
   }
   return nil;
 }
 
+- (void)shinobiDataGrid:(ShinobiDataGrid *)grid didChangeSortOrderForColumn:(SDataGridColumn*) column
+                   from:(SDataGridColumnSortOrder) oldSortOrder {
+  [self.gridColumnSortOrder setValue:@(column.sortOrder) forKey:column.propertyKey];
+}
+
 #pragma mark - Utility methods
 
-- (NSString*)getGrossStringForValue:(int)value {
+- (NSString*)formatGrossString:(NSString*)gross {
+  NSArray *array = [gross componentsSeparatedByCharactersInSet:
+                    [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  int value = [[array componentsJoinedByString:@""] intValue];
+  
   static NSNumberFormatter *numberFormatter = nil;
   
   static dispatch_once_t onceToken;

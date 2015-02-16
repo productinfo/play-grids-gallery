@@ -6,9 +6,9 @@
 		<key>title</key>
 		<string>Avatar</string>
 		<key>gross</key>
-		<integer>2782</integer>
+		<string>$2,787M</string>
 		<key>year</key>
-		<integer>2009</integer>
+		<real>2009</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -20,7 +20,7 @@
 		<key>title</key>
 		<string>Titanic</string>
 		<key>gross</key>
-		<real>2186</real>
+		<string>$2,186M</string>
 		<key>year</key>
 		<integer>1997</integer>
 		<key>genre</key>
@@ -34,9 +34,9 @@
 		<key>title</key>
 		<string>The Avengers</string>
 		<key>gross</key>
-		<real>1518</real>
+		<string>$1,518M</string>
 		<key>year</key>
-		<integer>2012</integer>
+		<real>2012</real>
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
@@ -48,9 +48,9 @@
 		<key>title</key>
 		<string>Harry Potter and the Deatlhy Hallows - Part 2</string>
 		<key>gross</key>
-		<integer>1341</integer>
+		<string>$1,341M</string>
 		<key>year</key>
-		<integer>2011</integer>
+		<real>2011</real>
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
@@ -62,9 +62,9 @@
 		<key>title</key>
 		<string>Frozen</string>
 		<key>gross</key>
-		<integer>1276</integer>
+		<string>$1,276M</string>
 		<key>year</key>
-		<integer>2013</integer>
+		<real>2013</real>
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
@@ -76,9 +76,9 @@
 		<key>title</key>
 		<string>Iron Man 3</string>
 		<key>gross</key>
-		<real>1215</real>
+		<string>$1,215M</string>
 		<key>year</key>
-		<integer>2013</integer>
+		<real>2013</real>
 		<key>genre</key>
 		<string>Sci-Fi</string>
 		<key>rating</key>
@@ -90,9 +90,9 @@
 		<key>title</key>
 		<string>Transformers: Dark of the Moon</string>
 		<key>gross</key>
-		<integer>1123</integer>
+		<string>$1,123M</string>
 		<key>year</key>
-		<integer>2011</integer>
+		<real>2011</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -104,9 +104,9 @@
 		<key>title</key>
 		<string>The Lord of the Rings: The Return of the King</string>
 		<key>gross</key>
-		<integer>1119</integer>
+		<string>$1,119M</string>
 		<key>year</key>
-		<integer>2003</integer>
+		<real>2003</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -118,9 +118,9 @@
 		<key>title</key>
 		<string>Skyfall</string>
 		<key>gross</key>
-		<integer>1108</integer>
+		<string>$1,108M</string>
 		<key>year</key>
-		<integer>2012</integer>
+		<real>2012</real>
 		<key>genre</key>
 		<string>Mystery</string>
 		<key>rating</key>
@@ -132,9 +132,9 @@
 		<key>title</key>
 		<string>Transformers: Age of Extinction</string>
 		<key>gross</key>
-		<integer>1087</integer>
+		<string>$1,087M</string>
 		<key>year</key>
-		<integer>2014</integer>
+		<real>2014</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -146,9 +146,9 @@
 		<key>title</key>
 		<string>The Dark Knight Rises</string>
 		<key>gross</key>
-		<real>1084</real>
+		<string>$1,084M</string>
 		<key>year</key>
-		<integer>2012</integer>
+		<real>2012</real>
 		<key>genre</key>
 		<string>Drama</string>
 		<key>rating</key>
@@ -160,9 +160,9 @@
 		<key>title</key>
 		<string>Pirate of the Caribbean: Dead Man&apos;s Chest</string>
 		<key>gross</key>
-		<integer>1066</integer>
+		<string>$1,066M</string>
 		<key>year</key>
-		<integer>2006</integer>
+		<real>2006</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -174,9 +174,9 @@
 		<key>title</key>
 		<string>Toy Story 3</string>
 		<key>gross</key>
-		<integer>1063</integer>
+		<string>$1,063M</string>
 		<key>year</key>
-		<integer>2010</integer>
+		<real>2010</real>
 		<key>genre</key>
 		<string>Animation</string>
 		<key>rating</key>
@@ -188,9 +188,9 @@
 		<key>title</key>
 		<string>Pirates of the Caribbean: On Stranger Tides</string>
 		<key>gross</key>
-		<integer>1045</integer>
+		<string>$1,045M</string>
 		<key>year</key>
-		<integer>2011</integer>
+		<real>2011</real>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>
@@ -202,7 +202,7 @@
 		<key>title</key>
 		<string>Jurassic Park</string>
 		<key>gross</key>
-		<integer>969</integer>
+		<string>$1,029M</string>
 		<key>year</key>
 		<integer>1993</integer>
 		<key>genre</key>
