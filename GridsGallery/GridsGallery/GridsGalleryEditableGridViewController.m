@@ -49,10 +49,7 @@
   }
 }
 
-- (NSInteger)getIntFromString:(NSString*)string {
-  // Returns an int made of the digits in the sequence they appear in given string
-  // e.g. given '$123M' it returns '123'
-  
+- (NSInteger)getIntFromString:(NSString*)string { 
   // Split the string into an array around any non-numeric character
   NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
                           [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
