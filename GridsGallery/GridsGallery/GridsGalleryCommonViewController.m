@@ -29,7 +29,6 @@
 @property CGRect gridFrame;
 @property CGPoint gridContentOffset;
 @property NSArray *selectedRows;
-@property NSMutableArray *sectionStatus;
 @property NSMutableDictionary *gridColumnSortOrder;
 @property NSMutableArray *gridColumnsOrder;
 
@@ -65,10 +64,8 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
-  // Recreate the grid if necessary and when the grid does not specifiy a
-  // groupedPropertyKey with which to partician the data in the grid into multiple sections.
-  // This is to avoid over complicating this simple implementation.
-  if ((!self.grid) && (self.dataSource.groupedPropertyKey == nil)) {
+  // Recreate the grid if necessary
+  if (!self.grid) {
     [self createGrid];
     
     // Persist column order
@@ -86,8 +83,9 @@
     
     // Set column sort orders
     for (SDataGridColumn *gridColumn in self.grid.columns) {
-      SDataGridColumnSortOrder columnSortOrder = (SDataGridColumnSortOrder)[self.gridColumnSortOrder[gridColumn.propertyKey] intValue];
-      gridColumn.sortOrder = (columnSortOrder) ? columnSortOrder : SDataGridColumnSortOrderNone;
+      if (self.gridColumnSortOrder[gridColumn.propertyKey]) {
+        gridColumn.sortOrder = (SDataGridColumnSortOrder)[self.gridColumnSortOrder[gridColumn.propertyKey] intValue];
+      }
     }
     
     // Restore selected rows
@@ -101,9 +99,9 @@
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
   
-  // Save the grids state prior to closing the demo when the grid does not specifiy a
-  // groupedPropertyKey with which to partician the data in the grid into multiple sections.
-  // This is to avoid over complicating this simple implementation.
+  // Save the grid's state then throw it away. We'll recreate it next time the view appears.
+  // However, we don't do this in the case of sectioned grids (those with a groupedPropertyKey)
+  // because closing sections causes the grid to flicker on reload
   if (self.dataSource.groupedPropertyKey == nil) {
       
     // Persist the data
@@ -121,7 +119,7 @@
     // Throw away the grid
     [self.grid removeFromSuperview];
     self.grid = nil;
-    self.dataSource.delegate = self;
+    self.dataSource.delegate = nil;
     self.dataSource = nil;
   }
 }
@@ -133,7 +131,7 @@
     self.grid = [[ShinobiDataGrid alloc] initWithFrame:self.gridFrame];
   }
   
-  // Chart may have already been added by a storyboard
+  // Grid has already been added by a storyboard
   if (![self.grid isDescendantOfView:self.view]) {
     [self.view addSubview:self.grid];
   }
@@ -235,11 +233,18 @@
 
 - (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
   SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
-  if ([coordinate.column.propertyKey isEqualToString:@"Gross"]) {
-    cell.textField.text = [self formatGrossString:cell.textField.text];
+  if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
+    int value = [self getIntFromString:cell.textField.text];
+    cell.textField.text = [self getGrossStringForValue:value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+    return;
+  } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
+    int value = [self getIntFromString:cell.textField.text];
+    cell.textField.text = [NSString stringWithFormat:@"%d", value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+    return;
   }
   self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
-  [self.grid reload];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -255,7 +260,7 @@
 - (id)dataGridDataSourceHelper:(SDataGridDataSourceHelper *)helper
        displayValueForProperty:(NSString *)propertyKey withSourceObject:(id)object {
   if ([propertyKey isEqualToString:@"gross"]) {
-    return [self formatGrossString:(NSString*)object[propertyKey]];
+    return [self getGrossStringForValue:[object[propertyKey] intValue]];
   }
   return nil;
 }
@@ -267,11 +272,13 @@
 
 #pragma mark - Utility methods
 
-- (NSString*)formatGrossString:(NSString*)gross {
-  NSArray *array = [gross componentsSeparatedByCharactersInSet:
-                    [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-  int value = [[array componentsJoinedByString:@""] intValue];
-  
+- (int)getIntFromString:(NSString*)string {
+  NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
+                          [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  return [[numberArray componentsJoinedByString:@""] intValue];
+}
+
+- (NSString*)getGrossStringForValue:(int)value {
   static NSNumberFormatter *numberFormatter = nil;
   
   static dispatch_once_t onceToken;
