@@ -37,11 +37,11 @@
   // For columns that contain numbers, extract the numbers from the user input,
   // format the result where appropriate, and update the data in the grid.
   if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
-    int value = [self getIntFromString:cell.textField.text];
+    NSInteger value = [self getIntFromString:cell.textField.text];
     cell.textField.text = [super getGrossStringForValue:value];
     self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
   } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
-    int value = [self getIntFromString:cell.textField.text];
+    NSInteger value = [self getIntFromString:cell.textField.text];
     cell.textField.text = [NSString stringWithFormat:@"%d", value];
     self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
   } else {
@@ -49,12 +49,15 @@
   }
 }
 
-- (int)getIntFromString:(NSString*)string {
-  // returns an int made of the digits in the sequence they appear in given string
+- (NSInteger)getIntFromString:(NSString*)string {
+  // Returns an int made of the digits in the sequence they appear in given string
   // e.g. given '$123M' it returns '123'
+  
+  // Split the string into an array around any non-numeric character
   NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
                           [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-  return [[numberArray componentsJoinedByString:@""] intValue];
+  // Join the numbers back together then cast to an NSInteger
+  return [[numberArray componentsJoinedByString:@""] integerValue];
 }
 
 @end
