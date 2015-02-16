@@ -8,7 +8,7 @@
 		<key>gross</key>
 		<integer>2787</integer>
 		<key>year</key>
-		<real>2009</real>
+		<integer>2009</integer>
 		<key>genre</key>
 		<string>Action</string>
 		<key>rating</key>

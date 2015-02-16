@@ -30,4 +30,29 @@
   }
 }
 
+#pragma mark - SDataGridDelegate methods
+
+- (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
+  SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
+  // For columns that contain numbers, extract the numbers from the users inputed text,
+  // format the result where appropriate, and update the data in the grid.
+  if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
+    int value = [self getIntFromString:cell.textField.text];
+    cell.textField.text = [super getGrossStringForValue:value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+  } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
+    int value = [self getIntFromString:cell.textField.text];
+    cell.textField.text = [NSString stringWithFormat:@"%d", value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+  } else {
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
+  }
+}
+
+- (int)getIntFromString:(NSString*)string {
+  NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
+                          [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+  return [[numberArray componentsJoinedByString:@""] intValue];
+}
+
 @end

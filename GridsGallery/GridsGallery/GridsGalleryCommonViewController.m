@@ -129,10 +129,6 @@
 - (void)createGrid {
   if (!self.grid) {
     self.grid = [[ShinobiDataGrid alloc] initWithFrame:self.gridFrame];
-  }
-  
-  // Grid has already been added by a storyboard
-  if (![self.grid isDescendantOfView:self.view]) {
     [self.view addSubview:self.grid];
   }
 }
@@ -231,22 +227,6 @@
 
 #pragma mark - SDataGridDelegate methods
 
-- (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
-  SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
-  if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
-    int value = [self getIntFromString:cell.textField.text];
-    cell.textField.text = [self getGrossStringForValue:value];
-    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
-    return;
-  } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
-    int value = [self getIntFromString:cell.textField.text];
-    cell.textField.text = [NSString stringWithFormat:@"%d", value];
-    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
-    return;
-  }
-  self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
-}
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
   self.gridContentOffset = scrollView.contentOffset;
 }
@@ -271,12 +251,6 @@
 }
 
 #pragma mark - Utility methods
-
-- (int)getIntFromString:(NSString*)string {
-  NSArray *numberArray = [string componentsSeparatedByCharactersInSet:
-                          [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-  return [[numberArray componentsJoinedByString:@""] intValue];
-}
 
 - (NSString*)getGrossStringForValue:(int)value {
   static NSNumberFormatter *numberFormatter = nil;
