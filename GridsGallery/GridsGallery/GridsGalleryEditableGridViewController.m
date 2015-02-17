@@ -52,9 +52,14 @@
 - (NSInteger)getIntegerFromString:(NSString*)string {
   NSError *error = nil;
   // Create regex that looks for all non digit or a decimal point in the string
-  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\d\\.]" options:NSRegularExpressionCaseInsensitive error:&error];
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\d\\.]"
+                                                                         options:NSRegularExpressionCaseInsensitive
+                                                                           error:&error];
   // Replace all the characters found by our regex leaving just the digits
-  NSString *numberString = [regex stringByReplacingMatchesInString:string options:0 range:NSMakeRange(0, [string length]) withTemplate:@""];
+  NSString *numberString = [regex stringByReplacingMatchesInString:string
+                                                           options:0
+                                                             range:NSMakeRange(0, [string length])
+                                                      withTemplate:@""];
   return [numberString integerValue];
 }
 
