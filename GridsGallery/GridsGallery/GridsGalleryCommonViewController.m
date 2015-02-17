@@ -119,7 +119,6 @@
     // Throw away the grid
     [self.grid removeFromSuperview];
     self.grid = nil;
-    self.dataSource.delegate = nil;
     self.dataSource = nil;
   }
 }
