@@ -42,7 +42,7 @@
     self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
   } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
     NSInteger value = [self getIntegerFromString:cell.textField.text];
-    cell.textField.text = [NSString stringWithFormat:@"%d", value];
+    cell.textField.text = [NSString stringWithFormat:@"%zd", value];
     self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
   } else {
     self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
