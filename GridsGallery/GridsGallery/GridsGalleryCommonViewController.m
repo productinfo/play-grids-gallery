@@ -251,7 +251,7 @@
 
 #pragma mark - Utility methods
 
-- (NSString*)getGrossStringForValue:(int)value {
+- (NSString*)getGrossStringForValue:(NSInteger)value {
   static NSNumberFormatter *numberFormatter = nil;
   
   static dispatch_once_t onceToken;
@@ -263,7 +263,7 @@
     [numberFormatter setPositiveFormat:@"$#,###M"];
   });
   
-  return [numberFormatter stringFromNumber:[NSNumber numberWithInt:value]];
+  return [numberFormatter stringFromNumber:[NSNumber numberWithInteger:value]];
 }
 
 - (void)addColumnWithTitle:(NSString*)title propertyKey:(NSString*)propertyKey
