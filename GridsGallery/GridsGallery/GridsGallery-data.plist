@@ -6,7 +6,7 @@
 		<key>title</key>
 		<string>Avatar</string>
 		<key>gross</key>
-		<integer>2782</integer>
+		<integer>2787</integer>
 		<key>year</key>
 		<integer>2009</integer>
 		<key>genre</key>
@@ -20,7 +20,7 @@
 		<key>title</key>
 		<string>Titanic</string>
 		<key>gross</key>
-		<real>2186</real>
+		<integer>2186</integer>
 		<key>year</key>
 		<integer>1997</integer>
 		<key>genre</key>
@@ -34,7 +34,7 @@
 		<key>title</key>
 		<string>The Avengers</string>
 		<key>gross</key>
-		<real>1518</real>
+		<integer>1518</integer>
 		<key>year</key>
 		<integer>2012</integer>
 		<key>genre</key>
@@ -76,7 +76,7 @@
 		<key>title</key>
 		<string>Iron Man 3</string>
 		<key>gross</key>
-		<real>1215</real>
+		<integer>1215</integer>
 		<key>year</key>
 		<integer>2013</integer>
 		<key>genre</key>
@@ -146,7 +146,7 @@
 		<key>title</key>
 		<string>The Dark Knight Rises</string>
 		<key>gross</key>
-		<real>1084</real>
+		<integer>1084</integer>
 		<key>year</key>
 		<integer>2012</integer>
 		<key>genre</key>
@@ -202,7 +202,7 @@
 		<key>title</key>
 		<string>Jurassic Park</string>
 		<key>gross</key>
-		<integer>969</integer>
+		<integer>1029</integer>
 		<key>year</key>
 		<integer>1993</integer>
 		<key>genre</key>

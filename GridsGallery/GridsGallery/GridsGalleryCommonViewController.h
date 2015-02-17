@@ -24,9 +24,9 @@
 
 @interface GridsGalleryCommonViewController : SPUGalleryManagedViewController<SDataGridDataSourceHelperDelegate>
 
-@property (weak, nonatomic) IBOutlet ShinobiDataGrid *grid;
+@property (strong, nonatomic) IBOutlet ShinobiDataGrid *grid;
 @property (strong, nonatomic) SDataGridDataSourceHelper *dataSource;
-@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *data;
 
 - (void)setupGrid;
 - (void)addColumns;

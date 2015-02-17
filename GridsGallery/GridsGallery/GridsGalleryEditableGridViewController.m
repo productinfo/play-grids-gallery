@@ -30,4 +30,37 @@
   }
 }
 
+#pragma mark - SDataGridDelegate methods
+
+- (void)shinobiDataGrid:(ShinobiDataGrid *)grid didFinishEditingCellAtCoordinate:(SDataGridCoord *)coordinate {
+  SDataGridTextCell *cell = (SDataGridTextCell*)[grid visibleCellAtCoordinate:coordinate];
+  // For columns that contain numbers, extract the numbers from the user input,
+  // format the result where appropriate, and update the data in the grid.
+  if ([coordinate.column.propertyKey isEqualToString:@"gross"]) {
+    NSInteger value = [self getIntegerFromString:cell.textField.text];
+    cell.textField.text = [super getGrossStringForValue:value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+  } else if ([coordinate.column.propertyKey isEqualToString:@"year"]) {
+    NSInteger value = [self getIntegerFromString:cell.textField.text];
+    cell.textField.text = [NSString stringWithFormat:@"%d", value];
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = @(value);
+  } else {
+    self.data[coordinate.row.rowIndex][coordinate.column.propertyKey] = cell.textField.text;
+  }
+}
+
+- (NSInteger)getIntegerFromString:(NSString*)string {
+  NSError *error = nil;
+  // Create regex that looks for all non digit or a decimal point in the string
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\d\\.]"
+                                                                         options:NSRegularExpressionCaseInsensitive
+                                                                           error:&error];
+  // Replace all the characters found by our regex leaving just the digits
+  NSString *numberString = [regex stringByReplacingMatchesInString:string
+                                                           options:0
+                                                             range:NSMakeRange(0, [string length])
+                                                      withTemplate:@""];
+  return [numberString integerValue];
+}
+
 @end
