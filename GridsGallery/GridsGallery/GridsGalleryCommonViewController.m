@@ -96,6 +96,10 @@
   self.grid.contentOffset = self.gridContentOffset;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+  [self.grid endEditing:YES];
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
   
@@ -119,7 +123,6 @@
     // Throw away the grid
     [self.grid removeFromSuperview];
     self.grid = nil;
-    self.dataSource.delegate = nil;
     self.dataSource = nil;
   }
 }
