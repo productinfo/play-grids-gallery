@@ -96,10 +96,6 @@
   self.grid.contentOffset = self.gridContentOffset;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-  [self.grid endEditing:YES];
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
   
