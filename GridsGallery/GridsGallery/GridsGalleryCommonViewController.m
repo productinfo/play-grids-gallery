@@ -99,10 +99,11 @@
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
   
-  // Save the grid's state then throw it away. We'll recreate it next time the view appears.
+  // If we're being moved from its parent VC, save the grid's state then throw it away.
+  // We'll recreate it next time the view appears.
   // However, we don't do this in the case of sectioned grids (those with a groupedPropertyKey)
   // because closing sections causes the grid to flicker on reload
-  if (self.dataSource.groupedPropertyKey == nil) {
+  if ([self isMovingFromParentViewController] && self.dataSource.groupedPropertyKey == nil) {
       
     // Persist the data
     self.data = [((SDataGridDataSourceHelper*)self.grid.dataSource).sortedData copy];
