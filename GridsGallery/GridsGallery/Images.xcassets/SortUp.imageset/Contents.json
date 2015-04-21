@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "SortUp@x1.png"
+      "filename" : "SortUp.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "SortUp@x2.png"
+      "filename" : "SortUp@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "SortUp@3x.png"
     }
   ],
   "info" : {
