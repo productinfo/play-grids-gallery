@@ -1,4 +1,4 @@
 [submodule "GridsGallery/ShinobiPlayUtils"]
 	path = GridsGallery/ShinobiPlayUtils
-	url = git@bitbucket.org:shinobicontrols/shinobi-play-utils.git
+	url = https://github.com/ShinobiControls/play-utils.git
 	branch = master

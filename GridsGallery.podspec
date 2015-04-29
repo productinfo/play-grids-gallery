@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "GridsGallery"
-  s.version          = '0.1.9'
+  s.version          = '1.0.0'
   s.summary          = "A gallery of ShinobiGrids"
   s.description      = <<-DESC
                        An app demonstrating the out of the box functionality supported by ShinobiGrids
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.shinobicontrols.com"
   s.license          = 'Apache License, Version 2.0'
   s.author           = { "Daniel Allsop" => "dallsop@shinobicontrols.com" }
-  s.source           = { :git => "https://bitbucket.org/shinobicontrols/play-grids-gallery.git", 
+  s.source           = { :git => "https://github.com/ShinobiControls/play-grids-gallery.git", 
                          :tag => s.version.to_s,
                          :submodules => true 
                        }
