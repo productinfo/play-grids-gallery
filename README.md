@@ -1,44 +1,43 @@
-Creating a new project from this template project
--------------------------------------------------
-
-1. Check out this template project, to somewhere with parent directory where you'll want checkouts of the other projects.
-
-2. From the checkout directory, run the duplicate script to create a new repository, replacing `<BitBucket username>` with your BitBucket username and `<New Repo Name>` with the name of the git repository you want to create (it should be prefixed with "play-"):
-
-        . ./duplicate.sh -u <BitBucket username> -r <New Repo Name>
-   This should duplicate the template project into a new repository on BitBucket, check out the project into the parent dir of the template project, and cd you into the new checkout.
-    
-3. From the newly created directory, open "GridsGallery" in Xcode and rename the project (click twice on project name in the Project Navigator, then follow the instructions, choosing to rename project content items). Close the project.
-
-4. **Make sure you're in the checkout of the new project not the template project.** Run the rename script (replacing `<New Project Name>` with your new name):
-
-        ./rename.sh <New Project Name>
-
-5. Edit **\<New Project Name\>.podspec** to fill in the summary, description, repo name, and frameworks.
-
-6. Build your project.
-
-7. Save a screenshot to **screenshot.png**.
-
-8. Edit the rest of this file so it makes sense (the bits to change are in ***bold italics*** [or at least surrounded by lots of asterisks] - please remove the formatting as well as editing them!), and remove everything up to and including this point -> .
-
-ShinobiPlay: Project Title (Objective-C/Swift)
+shinobiplay: Grids Gallery (Objective-C)
 =====================
 
-***Description of project (include link to blog post if there is one)***
+An app demonstrating the functionality of **shinobigrids**.
 
 ![Screenshot](screenshot.png?raw=true)
 
+Cloning or downloading the project
+------------------
+This project uses git submodules to include some code common to various **shinobiplay** projects.
+
+If you clone this project using GitHub Desktop, the submodules should be checked out automatically for you. Otherwise you can fetch the submodules on the command line using:
+
+    $ git submodule update --init --recursive
+    
+If you [download the zip](../../archive/master.zip) rather than cloning the project, you'll also have to download the submodule zips:
+
+* Download [play-utils](https://github.com/ShinobiControls/play-utils/archive/master.zip) and extract its contents into the **GridsGallery/ShinobiPlayUtils/** directory.
+
+Your directory structure should end up looking something like this:
+
+    .
+    └── GridsGallery
+        ├── GridsGallery
+        ├── GridsGallery.xcodeproj
+        └── ShinobiPlayUtils
+            └── ShinobiPlayUtils
+                ├── ShinobiPlayUtils
+                └── ShinobiPlayUtils.xcodeproj
+                
 Building the project
 ------------------
 
-In order to build this project you'll need a copy of Shinobi***Charts/Grids/Essentials/Gauges***. If you don't have it yet, you can download a free trial from the ***[ShinobiCharts/Grids/Essentials/Gauges website](link to appropriate section)***.
+In order to build this project you'll need a copy of **shinobigrids**. If you don't have it yet, you can download a free trial from the [**shinobicontrols** website](https://www.shinobicontrols.com).
 
-If you've used the installer to install Shinobi***Charts/Grids/Essentials/Gauges***, the project should just work. If you haven't, then once you've downloaded and unzipped Shinobi***Charts/Grids/Essentials/Gauges***, open up the project in Xcode, and drag Shinobi***Charts/Grids/Essentials/Gauges***.framework from the finder into Xcode's 'frameworks' group, and Xcode will sort out all the header and linker paths for you.
+If you've used the installer to install **shinobigrids**, the project should just work. If you haven't, then once you've downloaded and unzipped **shinobigrids**, open up the project in Xcode, and drag ShinobiGrids.framework from the finder into Xcode's 'frameworks' group, and Xcode will sort out all the header and linker paths for you.
 
-If you're using the trial version you'll need to add your license key. To do so, open up **MyProjectNameViewController.m** and add the following line inside `viewDidLoad`:
+If you're using the trial version you'll need to add your license key. To do so, open up **GridsGalleryViewController.m** and add the following line inside `viewDidLoad`:
 
-    [Shinobi***Charts/Grids/Essentials/Gauges*** setLicenseKey:@"your license key"];
+    [ShinobiGrids setLicenseKey:@"your license key"];
 
 Contributing
 ------------
@@ -48,5 +47,4 @@ We'd love to see your contributions to this project - please go ahead and fork i
 License
 -------
 
-The [Apache License, Version 2.0](license.txt) applies to everything in this repository, and will apply to any user contributions.
-
+The [Apache License, Version 2.0](LICENSE) applies to everything in this repository, and will apply to any user contributions.
