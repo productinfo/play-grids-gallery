@@ -35,9 +35,9 @@ In order to build this project you'll need a copy of **shinobigrids**. If you do
 
 If you've used the installer to install **shinobigrids**, the project should just work. If you haven't, then once you've downloaded and unzipped **shinobigrids**, open up the project in Xcode, and drag ShinobiGrids.framework from the finder into Xcode's 'frameworks' group, and Xcode will sort out all the header and linker paths for you.
 
-If you're using the trial version you'll need to add your license key. To do so, open up **GridsGalleryViewController.m** and add the following line inside `viewDidLoad`:
+If you're using the trial version you'll need to add your trial key. To do so, open up **GridsGalleryViewController.m** and add the following line inside `viewDidLoad`:
 
-    [ShinobiGrids setLicenseKey:@"your license key"];
+    [ShinobiGrids setTrialKey:@"your trial key"];
 
 Contributing
 ------------
